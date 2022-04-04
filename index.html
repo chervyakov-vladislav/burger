@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+	<!-- meta -->
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Описание">
+	<meta name="keywords" content="самый, ключевой, запрос">
+	<!-- favicon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/logo-favicon16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/logo-favicon.png">
+	<!-- title -->
+	<title>Mr. Burger</title>
+	<!-- og tags -->
+	<meta property="og:title" content="Mr. Burger">
+	<meta property="og:description" content='Самые вкусные бургеры'>
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="#">
+	<meta property="og:site_name" content="TEST">
+	<!-- fonts -->
+	<!-- css -->
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-	<h2 class="2">hello</h2>
+	<section class="section hero">
+		<div class="container hero__container">
+			<header class="header">
+				<img src="./img/icons/logo.svg" alt="mr burger logo" class="logo">
+				<div class="header__buttons">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">о нас</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">бургеры</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">команда</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">меню</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">отзывы</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">как мы работаем</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<button type="button" class="btn">Заказать</button>
+				</div>
+			</header>
+			<div class="hero__content">
+				<div class="hero__content-picture">
+					<img src="./img/content/1st_screen_hero/main_burger.png" alt="burger">
+				</div>
+				<div class="hero__desc">
+					<h1 class="hero__title">мы делаем</h1>
+					<div class="hero__subtitle">натуральные бургеры</div>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="arrow-scroll">
+			<img src="./img/icons/arrow-scroll.svg" alt="scroll">
+		</button>
+	</section>
 </body>
 </html>

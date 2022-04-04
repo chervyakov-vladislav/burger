@@ -1,0 +1,34 @@
+.hero { 
+	background: $black url('../img/bg/herobgtmp.jpg') center center / cover no-repeat;
+}
+
+.hero__container {
+	height: 100%;
+}
+
+.hero__content {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex: 0.9;
+}
+
+.hero__desc {
+	padding-top: 80px;
+	margin-left: 50px;
+}
+
+.hero__title {
+	font-family: $gagalin;
+	font-size: 72px;
+	color: $yellow;
+	margin-bottom: 55px;
+	line-height: 1;
+}
+
+.hero__subtitle {
+	font-size: 56px;
+	font-family: $lifehack;
+	color: #fff;
+	line-height: 1;
+}
