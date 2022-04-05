@@ -1,0 +1,34 @@
+.best {
+	background: url('./../img/bg/about.jpg') center center / cover no-repeat;
+}
+
+.best__list {
+	display: flex;
+	margin-top: 56px;
+}
+
+.best__item {
+	flex: 1;
+	margin-right: 35px;
+	text-align: center;
+	
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.best__picture {
+	margin-bottom: 34px;
+}
+
+.best__desc-title {
+	font-size: 24px;
+	font-family: $lifehack;
+	margin-bottom: 23px;
+}
+
+.best__desc-text {
+	font-weight: light;
+	font-size: 14px;
+	opacity: .8;
+}

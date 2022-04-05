@@ -1,0 +1,21 @@
+.title {
+	font-family: $gagalin;
+	font-size: 72px;
+	line-height: 1;
+
+	&--color {
+		&--yellow {
+			color: $yellow;
+		}
+		&--black {
+			color: $black;
+		}
+		&--white {
+			color: #fff;
+		}
+	}
+
+	&--centered {
+		text-align: center;
+	}
+}

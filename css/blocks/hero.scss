@@ -1,5 +1,6 @@
 .hero { 
 	background: $black url('../img/bg/herobgtmp.jpg') center center / cover no-repeat;
+	position: relative;
 }
 
 .hero__container {
@@ -19,11 +20,7 @@
 }
 
 .hero__title {
-	font-family: $gagalin;
-	font-size: 72px;
-	color: $yellow;
 	margin-bottom: 55px;
-	line-height: 1;
 }
 
 .hero__subtitle {
