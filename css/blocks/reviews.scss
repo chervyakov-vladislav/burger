@@ -12,6 +12,7 @@
 	&:hover {
 		.reviews__hover {
 			opacity: 1;
+			border-radius: 0;
 		}
 	}
 }
@@ -29,9 +30,22 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba($black, .7);
+	background: rgba($black, .5);
 	color: #fff;
-	padding: 50px 19px 25px;
+	padding: 50px 50px 25px;
 	opacity: 0;
-	transition: .3s;
+	transition: .5s;
+	border-radius: 40%;
+}
+
+.reviews__title {
+	font-family: $gagalin;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.reviews__text {
+	font-weight: light;
+	font-size: 14px;
+	margin-bottom: 20px;
 }

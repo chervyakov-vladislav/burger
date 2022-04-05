@@ -18,6 +18,7 @@ $hover-black: #1f2122;
 //z-index
 
 $z-fixed-menu: 100;
+$z-index-video-bg: -1;
 
 //normalize 
 
@@ -32,6 +33,7 @@ $z-fixed-menu: 100;
 
 //blocks
 
+@import "blocks/video-bg.scss";
 @import "blocks/section.scss";
 @import "blocks/title.scss";
 @import "blocks/hero.scss";

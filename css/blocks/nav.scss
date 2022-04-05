@@ -13,10 +13,11 @@
 	align-items: center;
 	margin-right: 14px;
 
+
 	&::after {
 		content: "";
 		width: 4px;
-		height: 4px;
+		height: 3px;
 		background: #fff;
 		border-radius: 50%;
 		margin-left: 14px;
@@ -28,6 +29,12 @@
 			margin-right: 0;
 		}
 	}
+
+	&:hover {
+		.nav__link {
+			color: $red;
+		}
+	}
 }
 
 .nav__link {
@@ -35,4 +42,5 @@
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 13px;
+	transition: .3s;
 }

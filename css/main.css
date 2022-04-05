@@ -458,6 +458,15 @@ button {
   color: inherit;
 }
 
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
 .section {
   height: 100vh;
   min-height: 650px;
@@ -497,7 +506,7 @@ button {
 }
 
 .hero {
-  background: #2f3234 url("../img/bg/herobgtmp.jpg") center center/cover no-repeat;
+  background: url("../img/bg/texture-video.png") center center/cover no-repeat;
   position: relative;
 }
 
@@ -585,7 +594,7 @@ button {
 .nav__item::after {
   content: "";
   width: 4px;
-  height: 4px;
+  height: 3px;
   background: #fff;
   border-radius: 50%;
   margin-left: 14px;
@@ -594,33 +603,95 @@ button {
   display: none;
   margin-right: 0;
 }
+.nav__item:hover .nav__link {
+  color: #e35028;
+}
 
 .nav__link {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   font-size: 13px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .btn {
-  padding: 12px 15px;
+  padding: 10px 16px;
   border-radius: 5px;
   background: #e35028;
   text-transform: uppercase;
   color: #fff;
   font-size: 13px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.btn::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0.8;
+  -webkit-transform: translate(-4em) skewX(30deg);
+          transform: translate(-4em) skewX(30deg);
+}
+.btn:hover {
+  background: #c1401e;
+}
+.btn:hover::before {
+  -webkit-animation: light 0.7s;
+          animation: light 0.7s;
+}
+.btn--bg--black {
+  background: #2f3234;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.btn--bg--black:hover {
+  background: #1f2122;
 }
 
+@-webkit-keyframes light {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
+}
+
+@keyframes light {
+  from {
+    -webkit-transform: translateX(-4em) skewX(-45deg);
+            transform: translateX(-4em) skewX(-45deg);
+  }
+  to {
+    -webkit-transform: translateX(10em) skewX(-45deg);
+            transform: translateX(10em) skewX(-45deg);
+  }
+}
 .arrow-scroll {
   width: 29px;
   height: 14px;
   background: url("../img/icons/arrow-scroll.svg") center center/contain no-repeat;
   display: block;
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.arrow-scroll:hover {
+  bottom: 36px;
 }
 
 .best {
@@ -677,6 +748,7 @@ button {
 }
 .reviews__item:hover .reviews__hover {
   opacity: 1;
+  border-radius: 0;
 }
 
 .reviews__pic {
@@ -693,12 +765,25 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(47, 50, 52, 0.7);
+  background: rgba(47, 50, 52, 0.5);
   color: #fff;
-  padding: 50px 19px 25px;
+  padding: 50px 50px 25px;
   opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 40%;
+}
+
+.reviews__title {
+  font-family: "Gagalin";
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.reviews__text {
+  font-weight: light;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .order {
@@ -710,6 +795,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 40px;
 }
 
 .form__column {
@@ -726,6 +812,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 20px;
 }
 
 .form__block {
@@ -739,16 +826,107 @@ button {
   margin-right: 0;
 }
 
+.form__block-title {
+  font-weight: light;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
 .form__input {
   background: #fff;
   border-radius: 3px;
   border: none;
-  padding: 8px 21px;
+  padding: 10px 21px;
+  margin-top: 5px;
   width: 100%;
+  outline-color: #f9b43b;
 }
 .form__input--textarea {
   resize: none;
-  height: 110px;
+  height: 124px;
+}
+
+.form__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.form__radio:last-child {
+  margin-right: 0;
+}
+
+.form__radio--input {
+  display: none;
+}
+.form__radio--input:checked + .form__radio--check::before, .form__radio--input:checked + .form__checkbox--check::before {
+  opacity: 1;
+}
+
+.form__radio--check, .form__checkbox--check {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+}
+.form__radio--check::before, .form__checkbox--check::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #e35028;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.form__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.form__checkbox--input {
+  display: none;
+}
+.form__checkbox--input:checked + .form__checkbox--check::before {
+  opacity: 1;
+}
+
+.form__checkbox--check {
+  border-radius: 0;
+}
+.form__checkbox--check::before {
+  height: 10px;
+  width: 10px;
+  background: transparent url("../img/content/form/checkbtn.png") center center/cover no-repeat;
+}
+
+.form__btn--clear {
+  font-weight: light;
+  font-size: 14px;
+  margin-left: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.form__btn--clear:hover {
+  color: #e35028;
 }
 
 .fixed-menu {
