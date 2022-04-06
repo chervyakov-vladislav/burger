@@ -34,7 +34,9 @@
 			<section class="section hero">
 				<div class="container hero__container">
 					<header class="header">
-						<img src="./img/icons/logo.svg" alt="mr burger logo" class="logo">
+						<svg class="logo">
+							<use xlink:href="./img/icons/sprite.svg#logo"></use>
+						</svg>
 						<div class="header__buttons">
 							<nav class="nav">
 								<ul class="nav__list">
@@ -67,6 +69,9 @@
 					<div class="hero__content">
 						<div class="hero__content-picture">
 							<img src="./img/content/1st_screen_hero/main_burger.png" alt="burger">
+							<svg class="drops">
+								<use xlink:href="./img/icons/sprite.svg#drops"></use>
+							</svg>
 						</div>
 						<div class="hero__desc">
 							<h1 class="title title--color--yellow hero__title">мы делаем</h1>
@@ -74,7 +79,11 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="arrow-scroll"></button>
+				<button type="button" class="arrow-scroll-btn">
+					<svg class="arrow-scroll">
+						<use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
+					</svg>
+				</button>
 			</section>
 		
 			<section class="section section--non--sentered best">
@@ -83,7 +92,9 @@
 					<ul class="best__list">
 						<li class="best__item">
 							<div class="best__picture">
-								<img src="./img/icons/meat.svg" alt="meat" class="best_picture-icon">
+								<svg class="meat">
+									<use xlink:href="./img/icons/sprite.svg#meat"></use>
+								</svg>
 							</div>
 							<div class="best__desc">
 								<div class="best__desc-title">
@@ -96,7 +107,9 @@
 						</li>
 						<li class="best__item">
 							<div class="best__picture">
-								<img src="./img/icons/hand.svg" alt="meat" class="best_picture-icon">
+								<svg class="hand">
+									<use xlink:href="./img/icons/sprite.svg#hand"></use>
+								</svg>
 							</div>
 							<div class="best__desc">
 								<div class="best__desc-title">
@@ -109,7 +122,9 @@
 						</li>
 						<li class="best__item">
 							<div class="best__picture">
-								<img src="./img/icons/natural.svg" alt="meat" class="best_picture-icon">
+								<svg class="natural">
+									<use xlink:href="./img/icons/sprite.svg#natural"></use>
+								</svg>
 							</div>
 							<div class="best__desc">
 								<div class="best__desc-title">
@@ -286,6 +301,58 @@
 						</form>
 					</div>
 				</div>
+			</section>
+
+			<section class="section contacts">
+				<footer class="footer">
+					<div class="container">
+						<div class="footer__content">
+							<div class="footer__contacts">
+								<div class="adress">
+									Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+								</div>
+								<a href="tel:+78123771377" class="phone">
+										<svg class="phone-icon">
+											<use xlink:href="./img/icons/sprite.svg#phone-icon"></use>
+										</svg>
+										+7 (812) 377-13-77
+								</a>
+							</div>
+							<div class="footer_socials">
+								<ul class="socials">
+									<li class="socials__item">
+										<a href="https://vk.com" class="socials__link" target="_blank">
+											<svg class="vk">
+												<use xlink:href="./img/icons/sprite.svg#vk"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="https://vk.com" class="socials__link" target="_blank">
+											<svg class="fb">
+												<use xlink:href="./img/icons/sprite.svg#fb"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="https://vk.com" class="socials__link" target="_blank">
+											<svg class="inst">
+												<use xlink:href="./img/icons/sprite.svg#inst"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="socials__item">
+										<a href="https://vk.com" class="socials__link" target="_blank">
+											<svg class="twitter">
+												<use xlink:href="./img/icons/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>				
+					</div>
+				</footer>
 			</section>
 
 		</div>

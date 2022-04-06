@@ -18,7 +18,7 @@ $hover-black: #1f2122;
 //z-index
 
 $z-fixed-menu: 100;
-$z-index-video-bg: -1;
+$z-index-video-bg: -10;
 
 //normalize 
 
@@ -30,6 +30,7 @@ $z-index-video-bg: -1;
 @import "_misc/mixins";
 @import "_misc/fonts.scss";
 @import "_misc/layout.scss";
+@import "_misc/keyframes.scss";
 
 //blocks
 
@@ -40,9 +41,15 @@ $z-index-video-bg: -1;
 @import "blocks/header.scss";	
 @import "blocks/nav.scss";	
 @import "blocks/btn.scss";	
-@import "blocks/arrow-scroll.scss";	
+@import "blocks/arrow-scroll-btn.scss";	
 @import "blocks/best.scss";	
 @import "blocks/reviews.scss";	
 @import "blocks/order.scss";
 @import "blocks/form.scss";
 @import "blocks/fixed-menu.scss";
+@import "blocks/sprite.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer.scss";
+@import "blocks/adress.scss";
+@import "blocks/phone.scss";
+@import "blocks/socials.scss";

@@ -1,0 +1,14 @@
+.phone {
+	color: $orange;
+	font-weight: bold;
+	font-size: 14px;
+	transition: .5s;
+
+	&:hover {
+		color: $hover-orange;
+
+		.phone-icon {
+			fill: $hover-orange;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.socials {
+	display: flex;
+	align-items: center;
+}
+
+.socials__item {
+	margin-right: 20px;
+	opacity: .3;
+	transition: .5s;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+
+}

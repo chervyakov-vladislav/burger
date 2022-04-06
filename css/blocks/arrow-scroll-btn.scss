@@ -1,0 +1,11 @@
+.arrow-scroll-btn {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: .3s;
+
+	&:hover {
+		bottom: 36px;
+	}
+}
