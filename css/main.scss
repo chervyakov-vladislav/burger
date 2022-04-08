@@ -20,6 +20,11 @@ $hover-black: #1f2122;
 $z-fixed-menu: 100;
 $z-index-video-bg: -10;
 
+
+//media
+@import "_misc/media.scss";
+
+
 //normalize 
 
 @import "_misc/normalize.scss";
@@ -31,6 +36,7 @@ $z-index-video-bg: -10;
 @import "_misc/fonts.scss";
 @import "_misc/layout.scss";
 @import "_misc/keyframes.scss";
+
 
 //blocks
 

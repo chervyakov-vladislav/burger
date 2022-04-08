@@ -1,7 +1,7 @@
 .phone {
 	color: $orange;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: rem(14px);
 	transition: .5s;
 
 	&:hover {

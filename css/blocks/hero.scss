@@ -19,16 +19,16 @@
 }
 
 .hero__desc {
-	padding-top: 80px;
-	margin-left: 50px;
+	padding-top: rem(80px);
+	margin-left: rem(50px);
 }
 
 .hero__title {
-	margin-bottom: 55px;
+	margin-bottom: rem(55px);
 }
 
 .hero__subtitle {
-	font-size: 56px;
+	font-size: rem(56px);
 	font-family: $lifehack;
 	color: #fff;
 	line-height: 1;

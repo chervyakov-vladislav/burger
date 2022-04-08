@@ -1,17 +1,17 @@
 .btn {
-	padding: 10px 16px;
-	border-radius: 5px;
+	padding: rem(10px) rem(16px);
+	border-radius: rem(5px);
 	background: $red;
 	text-transform: uppercase;
 	color: #fff;
-	font-size: 13px;
+	font-size: rem(13px);
 	position: relative;
 	overflow: hidden;
 	transition: .7s;
 
 	&::before {
 		content: "";
-		width: 10px;
+		width: rem(10px);
 		height: 100%;
 		position: absolute;
 		top: 0;

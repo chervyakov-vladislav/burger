@@ -1,53 +1,53 @@
 .logo {
-	width: 98.265px;
-	height: 74.317px;
+	width: rem(98.265px);
+	height: rem(74.317px);
 }
 
 .arrow-scroll {
-	width: 28.685px;
-	height: 14.479px;
+	width: rem(28.685px);
+	height: rem(14.479px);
 }
 
 .meat {
-	width: 96.428px;
-	height: 89.246px;
+	width: rem(96.428px);
+	height: rem(89.246px);
 }
 
 .hand {
-	width: 73px;
-	height: 85.875px;
+	width: rem(73px);
+	height: rem(85.875px);
 }
 
 .natural {
-	width: 88px;
-	height: 75.534px;
+	width: rem(88px);
+	height: rem(75.534px);
 }
 
 .phone-icon {
-	width: 11px;
-	height: 11px;
-	margin-right: 5px;
+	width: rem(11px);
+	height: rem(11px);
+	margin-right: rem(5px);
 	fill:#E45028;
 }
 
 .vk {
-	width: 23px;
-	height: 13px;
+	width: rem(23px);
+	height: rem(13px);
 }
 
 .fb {
-	width: 20px;
-	height: 20px;
+	width: rem(20px);
+	height: rem(20px);
 }
 
 .inst {
-	width: 20px;
-	height: 20px;
+	width: rem(20px);
+	height: rem(20px);
 }
 
 .twitter {
-	width: 20px;
-	height: 16px;
+	width: rem(20px);
+	height: rem(16px);
 }
 
 .drops {
@@ -55,7 +55,7 @@
 	left: 48%;
 	top: 40%;
 	transform: translate(-50%, -50%);
-	width: 450.527px;
-	height: 241.369px;
+	width: rem(450.527px);
+	height: rem(241.369px);
 	animation: drop-color 4s infinite;
 }

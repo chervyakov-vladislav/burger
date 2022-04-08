@@ -7,7 +7,7 @@ html,body {
 }
 
 body {
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.42;
     position: relative;
     @include ubuntu();
@@ -19,17 +19,19 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    min-width: 940px + 20px;
+    // min-width: rem(940px) + rem(20px);
     min-height: 100%;
     overflow: hidden;
 }
 
 .container {
-    max-width: 940px;
-    // padding: 0 10px;
+		width: 98%;
+    max-width: rem(940px);
+    // padding: 0 rem(10px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+		position: relative;
   }
 
 h1,h2,h3,h4,h5,h6 {

@@ -32,7 +32,7 @@
 	bottom: 0;
 	background: rgba($black, .5);
 	color: #fff;
-	padding: 50px 50px 25px;
+	padding: rem(50px) rem(50px) rem(25px);
 	opacity: 0;
 	transition: .5s;
 	border-radius: 40%;
@@ -40,12 +40,12 @@
 
 .reviews__title {
 	font-family: $gagalin;
-	font-size: 14px;
-	margin-bottom: 20px;
+	font-size: rem(14px);
+	margin-bottom: rem(20px);
 }
 
 .reviews__text {
 	font-weight: light;
-	font-size: 14px;
-	margin-bottom: 20px;
+	font-size: rem(14px);
+	margin-bottom: rem(20px);
 }

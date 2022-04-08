@@ -1,5 +1,5 @@
 .nav {
-	margin-right: 15px;
+	margin-right: rem(15px);
 }
 
 .nav__list {
@@ -11,16 +11,16 @@
 .nav__item {
 	display: flex;
 	align-items: center;
-	margin-right: 14px;
+	margin-right: rem(14px);
 
 
 	&::after {
 		content: "";
-		width: 4px;
-		height: 3px;
+		width: rem(4px);
+		height: rem(3px);
 		background: #fff;
 		border-radius: 50%;
-		margin-left: 14px;
+		margin-left: rem(14px);
 	}
 
 	&:last-child {
@@ -41,6 +41,6 @@
 	text-decoration: none;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 13px;
+	font-size: rem(13px);
 	transition: .3s;
 }
