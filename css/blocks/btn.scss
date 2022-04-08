@@ -37,4 +37,19 @@
 			background: $hover-black;
 		}
 	}
+
+	&--mobile {
+		display: none;
+
+		@include phones{ 
+			display: inline-block;
+		}
+	}
+
+	&--desktop {
+
+		@include phones{ 
+			display: none;
+		}
+	}
 }

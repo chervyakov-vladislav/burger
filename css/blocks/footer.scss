@@ -7,22 +7,53 @@
 	max-height: rem(65px);
 	height: 100%;
 
+	@include phones {
+		max-height: rem(130px);
+	}
+
 	.container {
 		height: 100%;
 		justify-content: center;
+
+		@include phones {
+			align-items: center;
+		}
 	}
 }
 
 .footer__content {
 	display: flex;
+
+	@include tablets {
+		padding: 0 3%;
+	}
+
+	@include phones {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
+
+
 
 .footer__contacts {
 	width: 50%;
+
+	@include phones {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 .footer_socials {
 	width: 50%;
 	display: flex;
 	justify-content: flex-end;
+
+	@include phones {
+		justify-content: center;
+		width: 100%;
+		margin-top: 15px;
+	}
 }

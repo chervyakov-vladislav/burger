@@ -18,4 +18,8 @@
 	&--centered {
 		text-align: center;
 	}
+
+	@include phones {
+		font-size: rem(50px);
+	}
 }

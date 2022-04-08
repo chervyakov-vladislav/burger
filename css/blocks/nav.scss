@@ -1,5 +1,9 @@
 .nav {
 	margin-right: rem(15px);
+
+	@include laptop() {
+		display: none;
+	}
 }
 
 .nav__list {

@@ -1,11 +1,17 @@
 .logo {
 	width: rem(98.265px);
 	height: rem(74.317px);
+	z-index: $z-index-10;
 }
 
 .arrow-scroll {
 	width: rem(28.685px);
 	height: rem(14.479px);
+
+	@include phones {
+		width: rem(50px);
+		height: rem(40px);
+	}
 }
 
 .meat {
@@ -52,10 +58,15 @@
 
 .drops {
 	position: absolute;
-	left: 48%;
+	left: 47%;
 	top: 40%;
 	transform: translate(-50%, -50%);
-	width: rem(450.527px);
-	height: rem(241.369px);
+	width: rem(430px);
+	height: rem(230px);
 	animation: drop-color 4s infinite;
+	max-width: 100%;
+
+	@include tablets {
+		left: 48%;
+	}
 }

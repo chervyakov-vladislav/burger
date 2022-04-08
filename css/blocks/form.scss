@@ -2,6 +2,16 @@
 .form__elem {
 	display: flex;
 	padding-top: rem(40px);
+
+	@include tablets {
+		flex-direction: column;
+		max-width: rem(475px);
+		margin: 0 auto;
+	}
+
+	@include phones {
+		padding-top: rem(10px);
+	}
 }
 
 .form__column {
@@ -11,11 +21,19 @@
 	&:last-child{
 		margin-right: 0;
 	}
+
+	@include tablets {
+		margin-right: 0;
+	}
 }
 
 .form__row{ 
 	display: flex;
 	margin-bottom: rem(20px);
+
+	@include phones {
+		justify-content: center;
+	}
 }
 
 .form__block {

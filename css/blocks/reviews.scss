@@ -15,6 +15,11 @@
 			border-radius: 0;
 		}
 	}
+
+	@include tablets {
+		width: 50%;
+		height: 25%;
+	}
 }
 
 .reviews__pic {
@@ -36,6 +41,19 @@
 	opacity: 0;
 	transition: .5s;
 	border-radius: 40%;
+
+	@include tablets {
+		text-align: center;
+		padding: rem(30px) rem(15px) rem(20px);
+	}
+
+	@include phones {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 0;
+	}
 }
 
 .reviews__title {
@@ -48,4 +66,8 @@
 	font-weight: light;
 	font-size: rem(14px);
 	margin-bottom: rem(20px);
+
+	@include phones{ 
+		display: none;
+	}
 }
