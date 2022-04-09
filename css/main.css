@@ -343,43 +343,43 @@ template {
 
 @font-face {
   font-family: "Gagalin";
-  src: url("../../fonts/Gagalin-Regular.eot");
-  src: url("../../fonts/Gagalin-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/Gagalin-Regular.woff2") format("woff2"), url("../../fonts/Gagalin-Regular.woff") format("woff"), url("../../fonts/Gagalin-Regular.ttf") format("truetype"), url("../../fonts/Gagalin-Regular.svg#svgFontName") format("svg");
+  src: url("./../fonts/Gagalin-Regular.eot");
+  src: url("./../fonts/Gagalin-Regular.eot?#iefix") format("embedded-opentype"), url("./../fonts/Gagalin-Regular.woff2") format("woff2"), url("./../fonts/Gagalin-Regular.woff") format("woff"), url("./../fonts/Gagalin-Regular.ttf") format("truetype"), url("./../fonts/Gagalin-Regular.svg#svgFontName") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Lifehack";
-  src: url("../../fonts/Lifehack-Medium.eot");
-  src: url("../../fonts/Lifehack-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Lifehack-Medium.woff2") format("woff2"), url("../../fonts/Lifehack-Medium.woff") format("woff"), url("../../fonts/Lifehack-Medium.ttf") format("truetype"), url("../../fonts/Lifehack-Medium.svg#svgFontName") format("svg");
+  src: url("./../fonts/Lifehack-Medium.eot");
+  src: url("./../fonts/Lifehack-Medium.eot?#iefix") format("embedded-opentype"), url("./../fonts/Lifehack-Medium.woff2") format("woff2"), url("./../fonts/Lifehack-Medium.woff") format("woff"), url("./../fonts/Lifehack-Medium.ttf") format("truetype"), url("./../fonts/Lifehack-Medium.svg#svgFontName") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../../fonts/Ubuntu-Bold.eot");
-  src: url("../../fonts/Ubuntu-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Ubuntu-Bold.woff2") format("woff2"), url("../../fonts/Ubuntu-Bold.woff") format("woff"), url("../../fonts/Ubuntu-Bold.ttf") format("truetype"), url("../../fonts/Ubuntu-Bold.svg#svgFontName") format("svg");
+  src: url("./../fonts/Ubuntu-Bold.eot");
+  src: url("./../fonts/Ubuntu-Bold.eot?#iefix") format("embedded-opentype"), url("./../fonts/Ubuntu-Bold.woff2") format("woff2"), url("./../fonts/Ubuntu-Bold.woff") format("woff"), url("./../fonts/Ubuntu-Bold.ttf") format("truetype"), url("./../fonts/Ubuntu-Bold.svg#svgFontName") format("svg");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../../fonts/Ubuntu-Light.eot");
-  src: url("../../fonts/Ubuntu-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Ubuntu-Light.woff2") format("woff2"), url("../../fonts/Ubuntu-Light.woff") format("woff"), url("../../fonts/Ubuntu-Light.ttf") format("truetype"), url("../../fonts/Ubuntu-Light.svg#svgFontName") format("svg");
+  src: url("./../fonts/Ubuntu-Light.eot");
+  src: url("./../fonts/Ubuntu-Light.eot?#iefix") format("embedded-opentype"), url("./../fonts/Ubuntu-Light.woff2") format("woff2"), url("./../fonts/Ubuntu-Light.woff") format("woff"), url("./../fonts/Ubuntu-Light.ttf") format("truetype"), url("./../fonts/Ubuntu-Light.svg#svgFontName") format("svg");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../../fonts/Ubuntu-Medium.eot");
-  src: url("../../fonts/Ubuntu-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Ubuntu-Medium.woff2") format("woff2"), url("../../fonts/Ubuntu-Medium.woff") format("woff"), url("../../fonts/Ubuntu-Medium.ttf") format("truetype"), url("../../fonts/Ubuntu-Medium.svg#svgFontName") format("svg");
+  src: url("./../fonts/Ubuntu-Medium.eot");
+  src: url("./../fonts/Ubuntu-Medium.eot?#iefix") format("embedded-opentype"), url("./../fonts/Ubuntu-Medium.woff2") format("woff2"), url("./../fonts/Ubuntu-Medium.woff") format("woff"), url("./../fonts/Ubuntu-Medium.ttf") format("truetype"), url("./../fonts/Ubuntu-Medium.svg#svgFontName") format("svg");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Ubuntu";
-  src: url("../../fonts/Ubuntu.eot");
-  src: url("../../fonts/Ubuntu.eot?#iefix") format("embedded-opentype"), url("../../fonts/Ubuntu.woff2") format("woff2"), url("../../fonts/Ubuntu.woff") format("woff"), url("../../fonts/Ubuntu.ttf") format("truetype"), url("../../fonts/Ubuntu.svg#svgFontName") format("svg");
+  src: url("./../fonts/Ubuntu.eot");
+  src: url("./../fonts/Ubuntu.eot?#iefix") format("embedded-opentype"), url("./../fonts/Ubuntu.woff2") format("woff2"), url("./../fonts/Ubuntu.woff") format("woff"), url("./../fonts/Ubuntu.ttf") format("truetype"), url("./../fonts/Ubuntu.svg#svgFontName") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -868,6 +868,11 @@ button {
 .arrow-scroll-btn:hover {
   bottom: 2.25rem;
 }
+@media screen and (max-width: 480px) {
+  .arrow-scroll-btn {
+    bottom: 4.375rem;
+  }
+}
 
 .best {
   background: url("./../img/bg/about.jpg") center center/cover no-repeat;
@@ -963,7 +968,7 @@ button {
 }
 
 .best__desc-text {
-  font-weight: light;
+  font-weight: 300;
   font-size: 0.875rem;
   opacity: 0.8;
 }
@@ -1047,7 +1052,7 @@ button {
 }
 
 .reviews__text {
-  font-weight: light;
+  font-weight: 300;
   font-size: 0.875rem;
   margin-bottom: 1.25rem;
 }
@@ -1125,7 +1130,7 @@ button {
 }
 
 .form__block-title {
-  font-weight: light;
+  font-weight: 300;
   font-size: 0.875rem;
   margin-left: 0.625rem;
 }
@@ -1443,6 +1448,7 @@ button {
   color: #e45028;
   font-weight: bold;
   font-size: 0.875rem;
+  text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1473,10 +1479,6 @@ button {
 }
 .socials__item:hover {
   opacity: 1;
-}
-
-.menu {
-  margin-left: 20px;
 }
 
 .hamburger-menu {
@@ -1535,4 +1537,94 @@ button {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   display: none;
+}
+
+.menu {
+  background: url("./../img/bg/menu-bg.jpg") center center/cover no-repeat;
+  position: relative;
+}
+
+.menu__title {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 10;
+}
+@media screen and (max-width: 1200px) {
+  .menu__title {
+    left: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu__title {
+    top: 10%;
+  }
+}
+
+.menu__content {
+  height: 100%;
+}
+
+.vertical-accordeon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 100%;
+}
+
+.vertical-accordeon__list, .vertical-accordeon__item, .vertical-accordeon__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.vertical-accordeon__item:hover .vertical-accordeon__title {
+  color: #f9b43b;
+}
+.vertical-accordeon__item:hover .vertical-accordeon__contennt {
+  width: 33.75rem;
+  padding: 3.125rem 2.5rem;
+}
+
+.vertical-accordeon__btn {
+  width: 5rem;
+  text-decoration: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1.875rem;
+  background: center center/cover no-repeat;
+}
+
+.vertical-accordeon__title {
+  font-size: 2.5rem;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  line-height: 3.9375rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.vertical-accordeon__contennt {
+  background: rgba(47, 50, 52, 0.9);
+  overflow: hidden;
+  padding-top: 3.125rem;
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.vertical-accordeon__text {
+  color: #fff;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  width: 28.125rem;
 }

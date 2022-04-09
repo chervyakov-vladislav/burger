@@ -1,0 +1,58 @@
+.vertical-accordeon {
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+}
+
+.vertical-accordeon__list, .vertical-accordeon__item, .vertical-accordeon__btn {
+	display: flex;
+	height: 100%;
+}
+
+
+// активный класс .vertical-accordeon__item--active
+.vertical-accordeon__item {
+	&:hover {
+		.vertical-accordeon__title {
+			color: $yellow;
+		}
+	
+		.vertical-accordeon__contennt {
+			width: rem(540px);
+			padding: rem(50px) rem(40px);
+		}
+
+	}
+}
+
+.vertical-accordeon__btn{ 
+	width: rem(80px);
+	text-decoration: none;
+	justify-content: center;
+	padding-bottom: rem(30px);
+	background:  center center / cover no-repeat;
+}
+
+.vertical-accordeon__title{ 
+	font-size: rem(40px);
+	writing-mode: vertical-rl;
+	transform: rotate(180deg); 
+	line-height: rem(63px);
+	transition: .3s;
+}	
+
+.vertical-accordeon__contennt {
+	background: rgba($black, .9);
+	overflow: hidden;
+	padding-top: rem(50px);
+	width: 0;
+	transition: .5s;
+}
+
+.vertical-accordeon__text {
+	color: #fff;
+	font-weight: 300;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	width: rem(450px);
+}

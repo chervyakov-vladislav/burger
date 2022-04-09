@@ -17,7 +17,8 @@ $hover-black: #1f2122;
 
 //z-index
 
-$z-index-10: 10; // - logo, hamburger-open-close-btn
+$z-index-10: 10; // - logo, hamburger-open-close-btn, menu__title
+$z-index-20: 20; // vertical-accordeon__item(адаптив)
 $z-fixed-menu: 100;
 $z-index-video-bg: -10;
 
@@ -60,5 +61,6 @@ $z-index-video-bg: -10;
 @import "blocks/adress.scss";
 @import "blocks/phone.scss";
 @import "blocks/socials.scss";
-@import "blocks/menu.scss";
 @import "blocks/hamburger-menu.scss";
+@import "blocks/menu.scss";
+@import "blocks/vertical-accordeon.scss";

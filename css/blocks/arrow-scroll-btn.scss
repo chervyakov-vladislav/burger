@@ -8,4 +8,8 @@
 	&:hover {
 		bottom: rem(36px);
 	}
+
+	@include phones {
+		bottom: rem(70px);
+	}
 }
