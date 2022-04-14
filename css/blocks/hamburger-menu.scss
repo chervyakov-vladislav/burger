@@ -1,5 +1,6 @@
 .hamburger-menu {
 	height: 40px;
+	width: 30px;
   align-items: center;
   margin: 0 25px;
 	flex-direction: column;
@@ -22,7 +23,7 @@
 	position: absolute;
 	transition: .2s;
 	display: block;
-	z-index: $z-index-10;
+	z-index: $z-index-20;
 
 	&:nth-child(1) {
 		position: relative;
@@ -45,8 +46,4 @@
 		transform: rotate(-45deg);
 		display: none;
 	}
-
-	
-
-
 }
