@@ -8,11 +8,13 @@ $ubuntu: "Ubuntu";
 // colors
 
 $orange: #e45028;
-$yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 $hover-orange: #c1401e;
 $hover-black: #1f2122;
+ //gradient-colors
+$yellow: #f9b43b;
+$gradient-yellow: #eb8c38;
 
 
 //z-index
@@ -64,3 +66,8 @@ $z-index-video-bg: -10;
 @import "blocks/hamburger-menu.scss";
 @import "blocks/menu.scss";
 @import "blocks/vertical-accordeon.scss";
+@import "blocks/burgers-slider.scss";
+@import "blocks/slider-container.scss";
+@import "blocks/burger-card.scss";
+@import "blocks/composition.scss";
+@import "blocks/slider-dots.scss";

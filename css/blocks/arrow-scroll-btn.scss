@@ -12,4 +12,42 @@
 	@include phones {
 		bottom: rem(70px);
 	}
+
+	&--left {
+		left: -4%;
+		bottom: 50%;
+		top: 50%;
+		transform: translate(0,-50%);
+		transform: rotate(90deg);
+
+		&:hover {
+			bottom: 50%;
+			left: -5%;
+		}
+
+		@include tablets {
+			left: 4%;
+		}
+	}
+
+
+	&--right {
+		left: 101%;
+		top:50%;
+		bottom: 50%;
+		transform: rotate(-90deg);
+
+		&:hover {
+			left: 102%;
+			bottom: 50%;
+		}
+
+		@include tablets {
+			left: 92%;
+		}
+
+		@include phones {
+			left: 85%;
+		}
+	}
 }

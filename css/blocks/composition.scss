@@ -1,0 +1,26 @@
+.composition__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: rem(40px);
+	margin-bottom: rem(5px);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.composition__item--text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: rem(15px);
+	max-width: rem(200px);
+	width: 100%;
+	font-size: 14px;
+	color: $black;
+}
+
+.composition__item--amount {
+	font-weight: 300;
+}
