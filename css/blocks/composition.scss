@@ -24,3 +24,45 @@
 .composition__item--amount {
 	font-weight: 300;
 }
+
+.composition__close {
+	display: none;
+	right: 5%;
+	top: 5%;
+	position: absolute;
+
+	@include tablets {
+		display: block;
+	}
+	
+	@include phones {
+		right: 14%;
+	}
+}
+
+.composition__close-btn {
+	display: block;
+	padding: 15px;
+
+		&::before {
+			content: "";
+			height: 5px;
+			width: 30px;
+			position: absolute;
+			left: 0;
+			border-radius: 3px;
+			background: $red;
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			content: "";
+			height: 5px;
+			width: 30px;
+			left: 0;
+			position: absolute;
+			border-radius: 3px;
+			background: $red;
+			transform: rotate(-45deg);
+		}
+}

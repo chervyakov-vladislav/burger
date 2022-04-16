@@ -52,6 +52,10 @@
 	width: rem(400px);
 	height: 100%;
 
+	@include tablets {
+		max-width: rem(300px);
+	}
+
 	@include phones {
 		width: rem(250px);
 	}
@@ -61,7 +65,7 @@
 	padding-top: rem(80px);
 
 	@include tablets {
-		padding-top: rem(30px);
+		padding-top: rem(20px);
 	}
 
 	@include phones {
@@ -71,6 +75,10 @@
 
 .hero__title {
 	margin-bottom: rem(55px);
+
+	@include tablets {
+		margin-bottom: rem(25px);
+	}
 
 	@include phones {
 		margin-bottom: rem(15px);

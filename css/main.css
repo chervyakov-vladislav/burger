@@ -678,6 +678,11 @@ button {
   width: 25rem;
   height: 100%;
 }
+@media screen and (max-width: 768px) {
+  .hero__content-img {
+    max-width: 18.75rem;
+  }
+}
 @media screen and (max-width: 480px) {
   .hero__content-img {
     width: 15.625rem;
@@ -689,7 +694,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .hero__desc {
-    padding-top: 1.875rem;
+    padding-top: 1.25rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -700,6 +705,11 @@ button {
 
 .hero__title {
   margin-bottom: 3.4375rem;
+}
+@media screen and (max-width: 768px) {
+  .hero__title {
+    margin-bottom: 1.5625rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .hero__title {
@@ -1468,6 +1478,12 @@ button {
 @media screen and (max-width: 768px) {
   .drops {
     left: 48%;
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .drops {
+    padding: 0;
   }
 }
 
@@ -1889,6 +1905,12 @@ button {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   display: none;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .burger-card__composition--hover {
+    padding-right: 5rem;
+  }
 }
 
 .burger-card__image {
@@ -2062,6 +2084,50 @@ button {
 
 .composition__item--amount {
   font-weight: 300;
+}
+
+.composition__close {
+  display: none;
+  right: 5%;
+  top: 5%;
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .composition__close {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .composition__close {
+    right: 14%;
+  }
+}
+
+.composition__close-btn {
+  display: block;
+  padding: 15px;
+}
+.composition__close-btn::before {
+  content: "";
+  height: 5px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  border-radius: 3px;
+  background: #e35028;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.composition__close-btn::after {
+  content: "";
+  height: 5px;
+  width: 30px;
+  left: 0;
+  position: absolute;
+  border-radius: 3px;
+  background: #e35028;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .slider-dots {

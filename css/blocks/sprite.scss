@@ -68,6 +68,11 @@
 
 	@include tablets {
 		left: 48%;
+		padding: 0 5%;
+	}
+
+	@include phones {
+		padding: 0;
 	}
 }
 

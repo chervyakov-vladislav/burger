@@ -52,7 +52,6 @@
 	align-items: center;
 	flex-direction: column;
 	transition: .3s;
-	//можно создать псевдоэлемент, что бы всплывашка при мисклике не закрывалась
 }
 
 .burger-card__composition-title {
@@ -67,6 +66,11 @@
 	background: rgba(#fff, .9);
 	border-radius: 5px;
 	display: none;
+	position: relative;
+
+	@include tablets {
+		padding-right: rem(80px);
+	}
 }
 
 .burger-card__image {
