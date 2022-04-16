@@ -14,32 +14,44 @@
 	}
 
 	&--left {
-		left: -4%;
+		left: -8%;
 		bottom: 50%;
-		top: 50%;
+		top: 35%;
 		transform: translate(0,-50%);
 		transform: rotate(90deg);
 
 		&:hover {
 			bottom: 50%;
-			left: -5%;
+			left: -9%;
+		}
+
+		@include laptop {
+			left: -3%;
 		}
 
 		@include tablets {
 			left: 4%;
 		}
+
+		@include phones {
+			left: -4%;
+		}
 	}
 
 
 	&--right {
-		left: 101%;
-		top:50%;
+		left: 103%;
+		top: 35%;
 		bottom: 50%;
 		transform: rotate(-90deg);
 
 		&:hover {
-			left: 102%;
+			left: 104%;
 			bottom: 50%;
+		}
+
+		@include laptop {
+			left: 101%;
 		}
 
 		@include tablets {
@@ -47,7 +59,7 @@
 		}
 
 		@include phones {
-			left: 85%;
+			left: 95%;
 		}
 	}
 }

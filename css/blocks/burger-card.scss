@@ -16,6 +16,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 7% 0;
+
+	@include tablets {
+		padding: 0;
+	}
 }
 
 .burger-card__composition {
@@ -24,6 +29,16 @@
 	top: 0;
 	left: 0;
 	cursor: pointer;
+
+//через js сделай нормельый ховер
+	&:hover {
+		.burger-card__composition--item {
+			background: rgba($red, 1);
+		}
+		.burger-card__composition--hover {
+			display: block;
+		}
+	}
 }
 
 .burger-card__composition--item {
@@ -37,15 +52,7 @@
 	align-items: center;
 	flex-direction: column;
 	transition: .3s;
-
-	&:hover {
-		background: rgba($red, 1);
-
-		//через js сделай нормельый ховер
-		&+.burger-card__composition--hover {
-			display: block;
-		}
-	}
+	//можно создать псевдоэлемент, что бы всплывашка при мисклике не закрывалась
 }
 
 .burger-card__composition-title {

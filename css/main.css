@@ -940,9 +940,9 @@ button {
   }
 }
 .arrow-scroll-btn--left {
-  left: -4%;
+  left: -8%;
   bottom: 50%;
-  top: 50%;
+  top: 35%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   -webkit-transform: rotate(90deg);
@@ -950,23 +950,38 @@ button {
 }
 .arrow-scroll-btn--left:hover {
   bottom: 50%;
-  left: -5%;
+  left: -9%;
+}
+@media screen and (max-width: 1200px) {
+  .arrow-scroll-btn--left {
+    left: -3%;
+  }
 }
 @media screen and (max-width: 768px) {
   .arrow-scroll-btn--left {
     left: 4%;
   }
 }
+@media screen and (max-width: 480px) {
+  .arrow-scroll-btn--left {
+    left: -4%;
+  }
+}
 .arrow-scroll-btn--right {
-  left: 101%;
-  top: 50%;
+  left: 103%;
+  top: 35%;
   bottom: 50%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 .arrow-scroll-btn--right:hover {
-  left: 102%;
+  left: 104%;
   bottom: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .arrow-scroll-btn--right {
+    left: 101%;
+  }
 }
 @media screen and (max-width: 768px) {
   .arrow-scroll-btn--right {
@@ -975,7 +990,7 @@ button {
 }
 @media screen and (max-width: 480px) {
   .arrow-scroll-btn--right {
-    left: 85%;
+    left: 95%;
   }
 }
 
@@ -1816,6 +1831,12 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 7% 0;
+}
+@media screen and (max-width: 768px) {
+  .burger-card__left {
+    padding: 0;
+  }
 }
 
 .burger-card__composition {
@@ -1826,6 +1847,12 @@ button {
   top: 0;
   left: 0;
   cursor: pointer;
+}
+.burger-card__composition:hover .burger-card__composition--item {
+  background: #e35028;
+}
+.burger-card__composition:hover .burger-card__composition--hover {
+  display: block;
 }
 
 .burger-card__composition--item {
@@ -1848,12 +1875,6 @@ button {
           flex-direction: column;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-.burger-card__composition--item:hover {
-  background: #e35028;
-}
-.burger-card__composition--item:hover + .burger-card__composition--hover {
-  display: block;
 }
 
 .burger-card__composition-title {
@@ -2044,7 +2065,7 @@ button {
 }
 
 .slider-dots {
-  height: 4.6875rem;
+  height: 3.75rem;
   max-width: 58.75rem;
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
