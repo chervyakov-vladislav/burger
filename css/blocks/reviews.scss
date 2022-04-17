@@ -42,16 +42,20 @@
 	transition: .5s;
 	border-radius: 40%;
 
-	@include tablets {
-		text-align: center;
+	@include laptop {
 		padding: rem(30px) rem(15px) rem(20px);
 	}
 
-	@include phones {
+	@include tablets {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		text-align: center;
+		padding: rem(20px) rem(10px) rem(15px);
+	}
+
+	@include phones {
 		padding: 0;
 	}
 }
@@ -60,12 +64,20 @@
 	font-family: $gagalin;
 	font-size: rem(14px);
 	margin-bottom: rem(20px);
+
+	@include tablets {
+		margin-bottom: rem(10px);
+	}
 }
 
 .reviews__text {
 	font-weight: 300;
 	font-size: rem(14px);
 	margin-bottom: rem(20px);
+
+	@include tablets {
+		margin-bottom: rem(10px);
+	}
 
 	@include phones{ 
 		display: none;

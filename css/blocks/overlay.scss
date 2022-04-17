@@ -1,0 +1,75 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba($black, .9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay__continer {
+	min-width: rem(450px);
+	min-height: rem(250px);
+	background: #fff;
+	border-radius: 5px;
+	position: relative;
+	
+	@include phones {
+		min-width: initial;
+		width: 100%;
+		margin: 0 3%;
+	}
+}
+
+.overlay__close {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.overlay__close-btn {
+	position: absolute;
+	top: 40%;
+	right: 80%;
+
+	&::after {
+		content: '';
+		width: 20px;
+		height: 5px;
+		border-radius: 5px;
+		background: rgba($orange, .9);
+		transform: rotate(45deg);
+		position: absolute;
+	}
+
+	&::before {
+		content: '';
+		width: 20px;
+		height: 5px;
+		border-radius: 5px;
+		background: rgba($orange, .9);
+		transform: rotate(-45deg);
+		position: absolute;
+	}
+}
+
+.overlay__content {
+	padding: 25px 30px 25px 20px;
+}
+
+.overlay__title {
+	font-family: $gagalin;
+	font-size: rem(14px);
+	margin-bottom: rem(15px);
+	color: $black;
+}
+
+.overlay__text {
+	font-weight: 300;
+	font-size: rem(14px);
+}

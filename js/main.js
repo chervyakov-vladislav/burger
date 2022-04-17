@@ -25,7 +25,7 @@ const hoverOpen = document.querySelector('.burger-card__composition--item');
 		document.querySelector('.burger-card__composition--hover').style.display = 'none';
 	});
 	
-if (screen.width < 768) {
+if (screen.width < 769) {
 	hoverOpen.addEventListener('click', function(e) {
 		e.preventDefault();
 		document.querySelector('.burger-card__composition--hover').style.display = 'block';
