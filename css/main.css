@@ -1207,6 +1207,18 @@ button {
   }
 }
 
+.reviews__overlay--title {
+  font-family: "Gagalin";
+  font-size: 0.875rem;
+  margin-bottom: 0.9375rem;
+  color: #2f3234;
+}
+
+.reviews__overlay--text {
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
 .order {
   color: #fff;
   background: url(../img/bg/delivery-form.jpg) center center/cover no-repeat;
@@ -2217,6 +2229,7 @@ button {
 
 .overlay__continer {
   min-width: 28.125rem;
+  width: 28.75rem;
   min-height: 15.625rem;
   background: #fff;
   border-radius: 5px;
@@ -2242,6 +2255,7 @@ button {
   position: absolute;
   top: 40%;
   right: 80%;
+  cursor: pointer;
 }
 .overlay__close-btn::after {
   content: "";
@@ -2265,17 +2279,5 @@ button {
 }
 
 .overlay__content {
-  padding: 25px 30px 25px 20px;
-}
-
-.overlay__title {
-  font-family: "Gagalin";
-  font-size: 0.875rem;
-  margin-bottom: 0.9375rem;
-  color: #2f3234;
-}
-
-.overlay__text {
-  font-weight: 300;
-  font-size: 0.875rem;
+  padding: 25px 20px;
 }

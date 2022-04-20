@@ -12,6 +12,7 @@
 
 .overlay__continer {
 	min-width: rem(450px);
+	width: rem(460px);
 	min-height: rem(250px);
 	background: #fff;
 	border-radius: 5px;
@@ -36,6 +37,7 @@
 	position: absolute;
 	top: 40%;
 	right: 80%;
+	cursor: pointer;
 
 	&::after {
 		content: '';
@@ -59,17 +61,5 @@
 }
 
 .overlay__content {
-	padding: 25px 30px 25px 20px;
-}
-
-.overlay__title {
-	font-family: $gagalin;
-	font-size: rem(14px);
-	margin-bottom: rem(15px);
-	color: $black;
-}
-
-.overlay__text {
-	font-weight: 300;
-	font-size: rem(14px);
+	padding: 25px 20px;
 }
