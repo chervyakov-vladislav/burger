@@ -2,6 +2,8 @@
 	display: flex;
 	justify-content: flex-end;
 	height: 100%;
+
+	
 }
 
 .vertical-accordeon__list, .vertical-accordeon__item, .vertical-accordeon__btn {
@@ -9,21 +11,24 @@
 	height: 100%;
 }
 
+.vertical-accordeon__list {
+	@include tablets {
+		width: 100%;
+		justify-content: flex-end;
+	}
 
-// активный класс .vertical-accordeon__item--active
-.vertical-accordeon__item {
-	&:hover {
-		.vertical-accordeon__title {
-			color: $yellow;
-		}
-	
-		.vertical-accordeon__contennt {
-			width: rem(540px);
-			padding: rem(50px) rem(40px);
-		}
-
+	@include phones{
+		position: relative;
 	}
 }
+
+.vertical-accordeon__item {
+	@include tablets {
+		z-index: 10;
+	}
+} 
+
+
 
 .vertical-accordeon__btn{ 
 	width: rem(80px);
@@ -46,7 +51,11 @@
 	overflow: hidden;
 	padding-top: rem(50px);
 	width: 0;
-	transition: .5s;
+	transition: .3s;
+
+	@include tablets {
+		transition: inherit;
+	}
 }
 
 .vertical-accordeon__text {
@@ -55,4 +64,41 @@
 	font-size: rem(14px);
 	line-height: rem(24px);
 	width: rem(450px);
+
+	@include tablets {
+		width: inherit;
+	}
+}
+
+// активный класс .vertical-accordeon__item--active
+.vertical-accordeon__item--active {
+	.vertical-accordeon__title {
+		color: $yellow;
+	}
+
+	.vertical-accordeon__contennt {
+		width: rem(540px);
+		padding: rem(50px) rem(40px);
+
+		@include tablets {
+			width: 100%;
+		}
+	}
+
+	@include tablets {
+		.vertical-accordeon__btn {
+			max-width: rem(80px);
+			width: 100%;
+		}
+		width: 100%;
+	}
+
+	@include phones {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 20;
+	}
 }

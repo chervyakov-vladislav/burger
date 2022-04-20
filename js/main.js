@@ -17,7 +17,6 @@ header.addEventListener('click', function(e) {
 	}
 });
 
-
 //burgers-composition-close-btn
 const hoverClose = document.querySelector('.composition__close-btn');
 const hoverOpen = document.querySelector('.burger-card__composition--item');
@@ -35,8 +34,8 @@ if (screen.width < 769) {
 }
 
 //overlay reviews
-
 const reviewButton = document.querySelectorAll('.reviews__btn');
+const template = document.querySelector('#reviewsPopup').innerHTML;
 
 for (i = 0; i < reviewButton.length; i++) {
 	reviewButton[i].addEventListener("click", function(e) {
@@ -47,13 +46,11 @@ for (i = 0; i < reviewButton.length; i++) {
     });
 }
 
-
 function createOverlay(title, text) {
-	//не получилось добавить готовый шаблон на страницу, пришлось создавать див с оверлеем (newElement = document.createElement('div');) и в него закидывать шиблон
+	// как создавать шаблон без лишнего дива?
 	const newElement = document.createElement('div');
-	newElement.classList.add('overlay');
-	newElement.innerHTML = document.querySelector('#reviewsPopup').innerHTML;
-	
+	newElement.innerHTML = template;
+
 	const closeOverlay = newElement.querySelector('.overlay__close-btn');
 	const closeOverlayBg = newElement.querySelector('.overlay');
 
@@ -71,4 +68,21 @@ function createOverlay(title, text) {
 	newElement.querySelector('.reviews__overlay--text').innerHTML = text;
 
 	return newElement;
+}
+
+//accordeon
+
+const itemVertAccordeon = document.querySelectorAll('.vertical-accordeon__item');
+//не работает preventDefault;
+for (i = 0; i < itemVertAccordeon.length; i++) {
+	itemVertAccordeon[i].addEventListener('click', function(e) {
+		if (e.target.closest('.vertical-accordeon__item').classList.contains('vertical-accordeon__item--active')) {
+			e.target.closest('.vertical-accordeon__item').classList.remove('vertical-accordeon__item--active');
+		} else {
+			for (let j = 0; j < itemVertAccordeon.length; j++) {
+				itemVertAccordeon[j].classList.remove('vertical-accordeon__item--active');
+			}
+			e.target.closest('.vertical-accordeon__item').classList.add('vertical-accordeon__item--active');
+		}		
+	});
 }

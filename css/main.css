@@ -1786,12 +1786,24 @@ button {
   height: 100%;
 }
 
-.vertical-accordeon__item:hover .vertical-accordeon__title {
-  color: #f9b43b;
+@media screen and (max-width: 768px) {
+  .vertical-accordeon__list {
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
-.vertical-accordeon__item:hover .vertical-accordeon__contennt {
-  width: 33.75rem;
-  padding: 3.125rem 2.5rem;
+@media screen and (max-width: 480px) {
+  .vertical-accordeon__list {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vertical-accordeon__item {
+    z-index: 10;
+  }
 }
 
 .vertical-accordeon__btn {
@@ -1821,8 +1833,14 @@ button {
   overflow: hidden;
   padding-top: 3.125rem;
   width: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .vertical-accordeon__contennt {
+    -webkit-transition: inherit;
+    transition: inherit;
+  }
 }
 
 .vertical-accordeon__text {
@@ -1831,6 +1849,43 @@ button {
   font-size: 0.875rem;
   line-height: 1.5rem;
   width: 28.125rem;
+}
+@media screen and (max-width: 768px) {
+  .vertical-accordeon__text {
+    width: inherit;
+  }
+}
+
+.vertical-accordeon__item--active .vertical-accordeon__title {
+  color: #f9b43b;
+}
+.vertical-accordeon__item--active .vertical-accordeon__contennt {
+  width: 33.75rem;
+  padding: 3.125rem 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .vertical-accordeon__item--active .vertical-accordeon__contennt {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vertical-accordeon__item--active {
+    width: 100%;
+  }
+  .vertical-accordeon__item--active .vertical-accordeon__btn {
+    max-width: 5rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .vertical-accordeon__item--active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
 }
 
 .burgers-slider {
