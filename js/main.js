@@ -86,3 +86,18 @@ for (i = 0; i < itemVertAccordeon.length; i++) {
 		}		
 	});
 }
+
+//team-accordeon
+const itemTeamAccordeon = document.querySelectorAll('.staff__item');
+for (i = 0; i < itemTeamAccordeon.length; i++) {
+	itemTeamAccordeon[i].addEventListener('click', function(e) {
+		if (e.target.closest('.staff__item').classList.contains('staff__active')) {
+			e.target.closest('.staff__item').classList.remove('staff__active');
+		} else {
+			for (let j = 0; j < itemTeamAccordeon.length; j++) {
+				itemTeamAccordeon[j].classList.remove('staff__active');
+			}
+			e.target.closest('.staff__item').classList.add('staff__active');
+		}
+	});
+}
