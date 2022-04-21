@@ -101,3 +101,5 @@ for (i = 0; i < itemTeamAccordeon.length; i++) {
 		}
 	});
 }
+
+// slider menu

@@ -8,6 +8,7 @@
 
 .staff__item {
 	margin-bottom: 35px;
+	transition: .3s;
 }
 
 .staff__title {
@@ -44,7 +45,7 @@
 .staff__description {
 	display: flex;
 	margin-left: rem(25px);
-	opacity: 0;
+	overflow: hidden;
 	height: 0;
 	transition: .3s;
 
@@ -56,10 +57,8 @@
 }
 
 .staff__photo {
-	max-width: rem(100px);
-	max-height: rem(100px);
-	width: 100%;
-	height: 100%;
+	min-width: rem(100px);
+	height: rem(100px);
 	border-radius: 50%;
 	overflow: hidden;
 
@@ -90,16 +89,17 @@
 }
 
 .staff__active {
-		.staff__description {
-			height: 100%;
-			opacity: 1;
-		}
+	.staff__description {
+		transition: .3s;
+		height: 120px;
+	}
 
-		.staff__title {
-			color: $yellow;
-			&::after {
-				transform: rotate(-180deg);
-				top: 35%;
-			}
+	.staff__title {
+		color: $yellow;
+		&::after {
+			transform: rotate(-180deg);
+			top: 35%;
 		}
+	}
+	margin-bottom: rem(10px);
 }
