@@ -44,6 +44,10 @@
 	transform: rotate(180deg); 
 	line-height: rem(63px);
 	transition: .3s;
+
+	 &:hover {
+		 color: $yellow;
+	 }
 }	
 
 .vertical-accordeon__contennt {

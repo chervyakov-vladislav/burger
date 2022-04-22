@@ -17,6 +17,7 @@
 	background: #fff;
 	border-radius: 5px;
 	position: relative;
+	animation: zoomIn .3s;
 	
 	@include phones {
 		min-width: initial;

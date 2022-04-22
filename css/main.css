@@ -552,6 +552,26 @@ button {
             transform: translateX(10em) skewX(-45deg);
   }
 }
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
 .video-bg {
   position: fixed;
   top: 0;
@@ -1827,6 +1847,9 @@ button {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+.vertical-accordeon__title:hover {
+  color: #f9b43b;
+}
 
 .vertical-accordeon__contennt {
   background: rgba(47, 50, 52, 0.9);
@@ -1891,6 +1914,23 @@ button {
 .burgers-slider {
   background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
   background: linear-gradient(180deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+}
+
+.slider-container__list {
+  overflow: hidden;
+}
+
+.slider-container__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  will-change: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.slider-container__item {
+  width: 100%;
 }
 
 .burger-card {
@@ -2289,6 +2329,8 @@ button {
   background: #fff;
   border-radius: 5px;
   position: relative;
+  -webkit-animation: zoomIn 0.3s;
+          animation: zoomIn 0.3s;
 }
 @media screen and (max-width: 480px) {
   .overlay__continer {
