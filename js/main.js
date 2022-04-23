@@ -116,14 +116,9 @@ const maxRight = contentWidth * sliderItem.length;
 const step = contentWidth;
 let currentRight = 0;
 
-// сам догадался
 for (i=0; i < sliderItem.length; i++) {
 	sliderItem[i].style.minWidth = contentWidth + "px";
 }
-//подглядел как надо
-// sliderItem.forEach(item => {
-// 	item.style.minWidth = `${contentWidth}px`;
-// });
 
 sliderLeft.addEventListener('click', e => {
 	e.preventDefault();

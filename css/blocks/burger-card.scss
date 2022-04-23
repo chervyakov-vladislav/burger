@@ -78,8 +78,13 @@
 	max-width: rem(440px);
 	width: 100%;
 
+	@include tablets {
+		padding: 25% 0 0;
+	}
+
 	@include phones {
-		margin: 20% 0;
+		margin: 20% 0 10%;
+		padding: 5% 10% 0;
 	}
 }
 
@@ -147,10 +152,16 @@
 	color: #fff;
 	margin-top: rem(40px);
 	margin-bottom: rem(20px);
+	padding-right: rem(20px);
+
+	@include laptop {
+		padding-right: rem(60px);
+	}
 
 	@include tablets {
 		margin-top: rem(20px);
 		margin-bottom: rem(10px);
+		padding-right: 0;
 	}
 }
 

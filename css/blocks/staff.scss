@@ -38,7 +38,7 @@
 	@include tablets {
 		padding-left: 0;
 		max-width: rem(200px);
-		margin: 0 auto rem(25px);
+		margin: 0 auto;
 	}
 }
 
@@ -48,6 +48,7 @@
 	overflow: hidden;
 	height: 0;
 	transition: .3s;
+	justify-content: center;
 
 	@include tablets {
 		margin-left: 0;
@@ -64,6 +65,11 @@
 
 	@include tablets {
 		margin-bottom: rem(10px);
+		min-width: initial;
+		max-height: rem(100px);
+		max-width: rem(100px);
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -92,6 +98,10 @@
 	.staff__description {
 		transition: .3s;
 		height: 120px;
+
+		@include tablets {
+			height: rem(250px);
+		}
 	}
 
 	.staff__title {
