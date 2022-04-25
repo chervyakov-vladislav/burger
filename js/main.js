@@ -141,3 +141,103 @@ sliderRight.addEventListener('click', e => {
 		currentRight = 0;
 	}
 });
+
+//form popup вытаскиваем шаблон попапа и закидываем в форму
+const templateForm = document.querySelector('#formPopup').innerHTML;
+const sendButton =  document.querySelector('#sendBtn');
+const sendForm = document.querySelector('.form__elem');
+
+let dataForm;
+let textFormPopup;
+let textFormPopupError = 'Вы не ввели... ';
+
+sendButton.addEventListener('click', (e) => {
+	e.preventDefault();
+
+	if (!validateForm(sendForm)) {
+		createFormOverlay(textFormPopup);
+		textFormPopup = '';
+	} else {
+		let formData = createData();
+		const xhr = new XMLHttpRequest();
+		xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail')
+		xhr.responseType = 'json';
+		xhr.send(formData);
+		xhr.addEventListener('load', function() {
+			if (xhr.response.status === 1) {
+				textFormPopup = xhr.response.message;
+				createFormOverlay(textFormPopup);
+			} else {
+				textFormPopup = xhr.response.message;
+				createFormOverlay(textFormPopup);
+			}
+		});
+		textFormPopup = '';
+	}
+});
+
+function createFormOverlay(text) {
+	const newElement = document.createElement('div');
+	newElement.innerHTML = templateForm;
+
+	const closeOverlay = newElement.querySelector('.btn--overlay');
+	const closeOverlayBg = newElement.querySelector('.overlay');
+
+	closeOverlayBg.addEventListener('click', function(e) {
+		if (e.target === closeOverlayBg) {
+			closeOverlay.click();
+		}
+	});
+	closeOverlay.addEventListener('click', function(e) {
+		e.preventDefault();
+		document.querySelector('.order').removeChild(newElement);
+	})
+
+	newElement.querySelector('.reviews__overlay--text').innerHTML = text;
+
+	document.querySelector(".order").append(newElement);
+}
+
+function validateForm(form){
+	let valid = true;
+
+	if (!validateField(form.elements.comment)) {
+		valid = false;
+		textFormPopup = textFormPopupError + "Комментарий!";
+	}
+
+	if (!validateField(form.elements.phone)) {
+		valid = false;
+		textFormPopup = textFormPopupError + "Телефон!";
+	}
+
+	if (!validateField(form.elements.name)) {
+		valid = false;
+		textFormPopup = textFormPopupError + "Имя!";
+	}
+
+	return valid;
+}
+
+function validateField(field) {
+	return field.checkValidity();
+} 
+
+function createData() {
+	let formData = new FormData(sendForm);
+
+        formData.append("name", sendForm.elements.name.value);
+        formData.append("phone", sendForm.elements.phone.value);
+        formData.append("comment", sendForm.elements.comment.value);
+        formData.append("to", "vasy@liy.com");
+
+	return formData;
+	// почему не сработал stringify?
+	// dataForm = {
+	// 	"name": sendForm.elements.name.value,
+	// 	"phone": sendForm.elements.phone.value,
+	// 	"comment": "vasy@liy.com",
+	// 	"to": "vasy@liy.com"
+	// }
+	// return JSON.stringify(dataForm);
+}
