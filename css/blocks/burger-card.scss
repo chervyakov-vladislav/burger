@@ -84,12 +84,13 @@
 
 	@include phones {
 		margin: 20% 0 10%;
-		padding: 5% 10% 0;
+		padding: 5% 5% 0;
 	}
 }
 
 .burger-card__pic{
 	width: 100%;
+	max-height: rem(260px);
 }
 
 .burger-card__calory {
@@ -180,9 +181,17 @@
 	color: $red;
 	line-height: 1;
 	margin-right: rem(30px);
+
+	@include phones {
+		font-size: rem(25px);
+	}
 }
 
 .burger-card__order--amount {
 	font-size: rem(72px);
 	margin-right: rem(10px);
+
+	@include phones {
+		font-size: rem(45px);
+	}
 }

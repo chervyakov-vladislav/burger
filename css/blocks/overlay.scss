@@ -24,6 +24,21 @@
 		width: 100%;
 		margin: 0 3%;
 	}
+
+	&--form {
+		min-width: rem(450px);
+		width: rem(460px);
+		min-height: initial;
+		text-align: center;
+		color: $black;
+		padding: 1%;
+
+		@include phones {
+			min-width: initial;
+			width: 100%;
+			margin: 0 3%;
+		}
+	}
 }
 
 .overlay__close {
@@ -32,6 +47,15 @@
 	position: absolute;
 	right: 0;
 	top: 0;
+
+	&--form {
+		width: initial;
+		height: initial;
+		right: initial;
+		top: initial;
+		position: static;
+		margin: 0 auto;
+	}
 }
 
 .overlay__close-btn {
@@ -63,4 +87,8 @@
 
 .overlay__content {
 	padding: 25px 20px;
+
+	&--form {
+		padding: 20px;
+	}
 }

@@ -2055,12 +2055,13 @@ button {
 @media screen and (max-width: 480px) {
   .burger-card__image {
     margin: 20% 0 10%;
-    padding: 5% 10% 0;
+    padding: 5% 5% 0;
   }
 }
 
 .burger-card__pic {
   width: 100%;
+  max-height: 16.25rem;
 }
 
 .burger-card__calory {
@@ -2184,10 +2185,20 @@ button {
   line-height: 1;
   margin-right: 1.875rem;
 }
+@media screen and (max-width: 480px) {
+  .burger-card__order--price {
+    font-size: 1.5625rem;
+  }
+}
 
 .burger-card__order--amount {
   font-size: 4.5rem;
   margin-right: 0.625rem;
+}
+@media screen and (max-width: 480px) {
+  .burger-card__order--amount {
+    font-size: 2.8125rem;
+  }
 }
 
 .composition__item {
@@ -2359,6 +2370,21 @@ button {
     margin: 0 3%;
   }
 }
+.overlay__continer--form {
+  min-width: 28.125rem;
+  width: 28.75rem;
+  min-height: initial;
+  text-align: center;
+  color: #2f3234;
+  padding: 1%;
+}
+@media screen and (max-width: 480px) {
+  .overlay__continer--form {
+    min-width: initial;
+    width: 100%;
+    margin: 0 3%;
+  }
+}
 
 .overlay__close {
   width: 35px;
@@ -2366,6 +2392,14 @@ button {
   position: absolute;
   right: 0;
   top: 0;
+}
+.overlay__close--form {
+  width: initial;
+  height: initial;
+  right: initial;
+  top: initial;
+  position: static;
+  margin: 0 auto;
 }
 
 .overlay__close-btn {
@@ -2397,6 +2431,9 @@ button {
 
 .overlay__content {
   padding: 25px 20px;
+}
+.overlay__content--form {
+  padding: 20px;
 }
 
 .team {
