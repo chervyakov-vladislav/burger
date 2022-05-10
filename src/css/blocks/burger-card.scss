@@ -1,0 +1,197 @@
+.burger-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+
+	@include tablets {
+		flex-direction: column;
+		margin: 0 7%;
+	}
+}
+
+.burger-card__left {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7% 0;
+
+	@include tablets {
+		padding: 0;
+	}
+}
+
+.burger-card__composition {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+
+//через js сделай нормельый ховер
+	&:hover {
+		.burger-card__composition--item {
+			background: rgba($red, 1);
+		}
+		.burger-card__composition--hover {
+			display: block;
+		}
+	}
+}
+
+.burger-card__composition--item {
+
+	width: rem(90px);
+	height: rem(90px);
+	border-radius: 5px;
+	background: rgba($red, 0.65);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: .3s;
+}
+
+.burger-card__composition-title {
+	font-family: $gagalin;
+	font-size: rem(14px);
+	text-align: center;
+	color: #fff;
+}
+
+.burger-card__composition--hover {
+	padding: rem(15px) rem(20px);
+	background: rgba(#fff, .9);
+	border-radius: 5px;
+	display: none;
+	position: relative;
+
+	@include tablets {
+		padding-right: rem(80px);
+	}
+}
+
+.burger-card__image {
+	padding: 5%;
+	max-width: rem(440px);
+	width: 100%;
+
+	@include tablets {
+		padding: 25% 0 0;
+	}
+
+	@include phones {
+		margin: 20% 0 10%;
+		padding: 5% 5% 0;
+	}
+}
+
+.burger-card__pic{
+	width: 100%;
+	max-height: rem(260px);
+}
+
+.burger-card__calory {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: rem(90px);
+	height: rem(90px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .3s;
+	flex-direction: column;
+	opacity: .5;
+	font-family: $gagalin;
+	color: #fff;
+	text-align: center;
+
+	@include tablets {
+		top: 0;
+		right: 0;
+		bottom: inherit;
+		left: inherit;
+	}
+}
+
+.burger-card__calory--pic {
+	position: relative;
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.burger-card__calory--kkal-amount {
+	font-size: 20px;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.burger-card__calory--kkal {
+	font-size: 14px;
+	flex: 1;
+}
+
+.burger-card__right {
+	flex: 1;
+
+	@include tablets {
+		text-align: center;
+	}
+}
+
+.burger-card__description {
+	font-weight: 300;
+	font-size: rem(14px);
+	color: #fff;
+	margin-top: rem(40px);
+	margin-bottom: rem(20px);
+	padding-right: rem(20px);
+
+	@include laptop {
+		padding-right: rem(60px);
+	}
+
+	@include tablets {
+		margin-top: rem(20px);
+		margin-bottom: rem(10px);
+		padding-right: 0;
+	}
+}
+
+.burger-card__order {
+	display: flex;
+	align-items: flex-end;
+
+	@include tablets {
+		justify-content: center;
+	}
+}
+
+.burger-card__order--price {
+	font-family: $gagalin;
+	font-size: rem(30px);
+	color: $red;
+	line-height: 1;
+	margin-right: rem(30px);
+
+	@include phones {
+		font-size: rem(25px);
+	}
+}
+
+.burger-card__order--amount {
+	font-size: rem(72px);
+	margin-right: rem(10px);
+
+	@include phones {
+		font-size: rem(45px);
+	}
+}

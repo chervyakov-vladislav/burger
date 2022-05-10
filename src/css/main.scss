@@ -1,0 +1,47 @@
+//fonts
+
+$gagalin: "Gagalin";
+$lifehack: "Lifehack";
+$ubuntu: "Ubuntu"; 
+//  переменные в @include ubuntu() regular(default), light, medium, bold
+
+// colors
+
+$orange: #e45028;
+$black: #2f3234;
+$red: #e35028;
+$hover-orange: #c1401e;
+$hover-black: #1f2122;
+ //gradient-colors
+$yellow: #f9b43b;
+$gradient-yellow: #eb8c38;
+
+
+//z-index
+
+$z-index-10: 10; // - .header--fullscreen, menu__title
+$z-index-20: 20; // logo, hamburger-open-close-btn, vertical-accordeon__item(адаптив)
+$z-fixed-menu: 100;
+$z-index-video-bg: -10;
+
+
+//media
+@import "_misc/media.scss";
+
+
+//normalize 
+
+@import "_misc/normalize.scss";
+
+
+//setups
+
+@import "_misc/mixins";
+@import "_misc/fonts.scss";
+@import "_misc/layout.scss";
+@import "_misc/keyframes.scss";
+
+
+//blocks
+
+@import "blocks/*.scss";

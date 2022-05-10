@@ -1,0 +1,55 @@
+.btn {
+	padding: rem(10px) rem(16px);
+	border-radius: rem(5px);
+	background: $red;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: rem(13px);
+	position: relative;
+	overflow: hidden;
+	transition: .7s;
+
+	&::before {
+		content: "";
+		width: rem(10px);
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #fff;
+		opacity: .8;
+		transform: translate(-4em) skewX(30deg);
+	}
+
+	&:hover{
+		background: $hover-orange;
+		
+		&::before {
+			animation: light .7s;
+		}
+	}
+
+	&--bg--black {
+		background: $black;
+		transition: .5s;
+
+		&:hover {
+			background: $hover-black;
+		}
+	}
+
+	&--mobile {
+		display: none;
+
+		@include phones{ 
+			display: inline-block;
+		}
+	}
+
+	&--desktop {
+
+		@include phones{ 
+			display: none;
+		}
+	}
+}

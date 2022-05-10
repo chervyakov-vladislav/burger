@@ -1,0 +1,79 @@
+.arrow-scroll-btn {
+	position: absolute;
+	bottom: rem(40px);
+	left: 50%;
+	transform: translateX(-50%);
+	transition: .3s;
+
+	&:hover {
+		bottom: rem(36px);
+	}
+
+	@include phones {
+		bottom: rem(70px);
+	}
+
+	&--left {
+		bottom: initial;
+		right: initial;
+		left: -5%;
+		top: 39%;
+		transform: translate(0,-50%);
+		transform: rotate(90deg);
+
+		&:hover {
+			bottom: initial;
+			top: 39%;
+			left: -6%;
+		}
+
+		@include laptop {
+			left: 1%;
+			z-index: 100;
+
+			&:hover {
+				left: 0;
+			}
+		}
+
+		@include tablets {
+			left: 4%;
+
+			&:hover {
+				left: 3%;
+			}
+		}
+
+	}
+
+
+	&--right {
+		bottom: initial;
+		left: initial;
+		right: -5%;
+		top: 39%;
+		transform: rotate(-90deg);
+
+		&:hover {
+			bottom: initial;
+			top: 39%;
+			right: -6%;
+		}
+
+		@include laptop {
+			right: 1%;
+
+			&:hover {
+				right: 0;
+			}
+		}
+
+		@include tablets {
+			right: 4%;
+
+			&:hover {
+				right: 3%;
+			}
+		}
+	}
+}

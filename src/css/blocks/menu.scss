@@ -1,0 +1,23 @@
+.menu {
+	background: url('./../img/bg/menu-bg.jpg') center center / cover no-repeat;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;
+	top:20%;
+	left: 15%;
+	z-index: $z-index-10;
+
+	@include laptop {
+		left: 10%;
+	}
+
+	@include tablets {
+		top: 10%;
+	}
+}
+
+.menu__content {
+	height: 100%;
+}

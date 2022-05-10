@@ -1,0 +1,13 @@
+.slider-container__list {
+	overflow: hidden;
+}
+
+.slider-container__items {
+	display: flex;
+	will-change: right;
+	transition: .3s;
+}
+
+.slider-container__item {
+	width: 100%;
+}

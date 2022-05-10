@@ -1,0 +1,103 @@
+.hero { 
+	background: url('../img/bg/texture-video.png') center center / cover no-repeat;
+	position: relative;
+
+	@include tablets {
+		background: url('./../img/bg/herobgtmp.jpg') center center / cover no-repeat;
+	}
+}
+
+.hero__container {
+	height: 100%;
+}
+
+.hero__content {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex: 0.9;
+
+	@include tablets {
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		padding: 0 5%;
+	}
+
+	@include phones {
+		padding: 0 15%;
+		// flex: 0.7;
+	}
+
+}
+
+
+//left&right column
+.hero__content-picture, .hero__desc {
+	width: 50%;
+
+	@include tablets {
+		width: 100%;
+	}
+}
+
+
+.hero__content-picture {
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.hero__content-img {
+	width: rem(400px);
+	height: 100%;
+
+	@include tablets {
+		max-width: rem(300px);
+	}
+
+	@include phones {
+		width: rem(250px);
+	}
+}
+
+.hero__desc {
+	padding-top: rem(80px);
+
+	@include tablets {
+		padding-top: rem(20px);
+	}
+
+	@include phones {
+		padding-top: rem(15px);
+	}
+}
+
+.hero__title {
+	margin-bottom: rem(55px);
+
+	@include tablets {
+		margin-bottom: rem(25px);
+	}
+
+	@include phones {
+		margin-bottom: rem(15px);
+		font-size: rem(50px);
+	}
+}
+
+.hero__subtitle {
+	font-size: rem(56px);
+	font-family: $lifehack;
+	color: #fff;
+	line-height: 1;
+
+	@include tablets {
+		max-width: 500px;
+		margin: 0 auto ;
+	}
+
+	@include phones {
+		font-size: rem(45px);
+	}
+}

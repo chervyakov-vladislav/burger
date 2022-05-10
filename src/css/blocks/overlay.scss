@@ -1,0 +1,94 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba($black, .9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay__continer {
+	min-width: rem(450px);
+	width: rem(460px);
+	min-height: rem(250px);
+	background: #fff;
+	border-radius: 5px;
+	position: relative;
+	animation: zoomIn .3s;
+	
+	@include phones {
+		min-width: initial;
+		width: 100%;
+		margin: 0 3%;
+	}
+
+	&--form {
+		min-width: rem(450px);
+		width: rem(460px);
+		min-height: initial;
+		text-align: center;
+		color: $black;
+		padding: 1%;
+
+		@include phones {
+			min-width: initial;
+			width: 100%;
+			margin: 0 3%;
+		}
+	}
+}
+
+.overlay__close {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	&--form {
+		width: initial;
+		height: initial;
+		right: initial;
+		top: initial;
+		position: static;
+		margin: 0 auto;
+	}
+}
+
+.overlay__close-btn {
+	position: absolute;
+	top: 40%;
+	right: 80%;
+	cursor: pointer;
+
+	&::after {
+		content: '';
+		width: 20px;
+		height: 5px;
+		border-radius: 5px;
+		background: rgba($orange, .9);
+		transform: rotate(45deg);
+		position: absolute;
+	}
+
+	&::before {
+		content: '';
+		width: 20px;
+		height: 5px;
+		border-radius: 5px;
+		background: rgba($orange, .9);
+		transform: rotate(-45deg);
+		position: absolute;
+	}
+}
+
+.overlay__content {
+	padding: 25px 20px;
+
+	&--form {
+		padding: 20px;
+	}
+}
