@@ -1,8 +1,35 @@
 .videocontent {
-	max-width: rem(660px);
-	height: rem(405px);
-	width: 100%;
-	background: $black;
+	max-width: rem(1000px);
+	position: relative;
+	width: 90%;
+	// background: $black;
 	margin: rem(50px) auto 0;
 	display: flex;
+	justify-content: center;
+	margin-inline: auto;
+	aspect-ratio: 16/9;
+}
+
+.videocontent__container {
+	width: 100%;
+}
+
+.videocontent__iframe {
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
+.videocontent__play-btn {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.videocontent__controls {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }

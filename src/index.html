@@ -995,22 +995,24 @@
 					<h2 class="title title--color--black title--centered">как мы работаем</h2>
 					<div class="videocontent">
 						<div class="videocontent__container">
-							<!-- заменить на iframe и воткнуть видео из ютуба по документации api-->
-							<div class="videocontent__player"></div>
+							<div class="videocontent__controls">
+								<div class="timeline-container"></div>
+								<div class="controls">
+									<button class="controls__play-pause-btn"></button>
+									<button class="controls__timer"></button>
+									<button class="controls__volume"></button>
+								</div>
+							</div>
+							<div class="videocontent__player">
+								<iframe class="videocontent__iframe" src="https://www.youtube.com/embed/Wdc8IuU7foE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
 							<div class="videocontent__play-btn">
 								<svg class="play">
 									<use xlink:href="./img/icons/sprite.svg#play"></use>
 								</svg>
 							</div>
 						</div>
-						<div class="videocontent__controls">
-							<div class="controls">
-								<div class="controls__play-pause"></div>
-								<div class="controls__timeline"></div>
-								<div class="controls__timer"></div>
-								<div class="controls__volume"></div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</section>
