@@ -104,12 +104,12 @@ for (i = 0; i < itemTeamAccordeon.length; i++) {
 
 // slider
 // не сделаны буллеты снизу
-sliderContainer = document.querySelector('.slider-container__list');
-sliderCarousel = document.querySelector('.slider-container__items');
-sliderItem = document.querySelectorAll('.slider-container__item');
-contentWidth = document.querySelector('.slider-container__list').clientWidth;
-sliderLeft = document.querySelector('#slider-left');
-sliderRight = document.querySelector('#slider-right');
+let sliderContainer = document.querySelector('.slider-container__list');
+let sliderCarousel = document.querySelector('.slider-container__items');
+let sliderItem = document.querySelectorAll('.slider-container__item');
+let contentWidth = document.querySelector('.slider-container__list').clientWidth;
+let sliderLeft = document.querySelector('#slider-left');
+let sliderRight = document.querySelector('#slider-right');
 
 const minRight = 0;
 const maxRight = contentWidth * sliderItem.length;
