@@ -123,11 +123,38 @@
 	fill: rgba(#fff, .7);
 	padding-left: 30px;
 	padding-bottom: 15px;
+	transition: .8s;
+	cursor: pointer;
+
+		&:hover {
+			fill: rgba(#fff, 1);
+		}
+
+		
+		@include tablets {
+			width: 70%;
+			height: 70%;
+		}
 }
 
 
-.volume{
-	width: rem(300px);
-	height: rem(300px);
+.controls__play {
+	width: rem(30px);
+	height: rem(30px);
 	fill: rgba(#fff, .7);
+	transition: .8s;
+
+		&:hover {
+			fill: rgba(#fff, 1);
+		}
+}
+
+.volume{
+	width: rem(30px);
+	height: rem(30px);
+	fill: rgba(#fff, .7);
+	
+		&:hover {
+			fill: rgba(#fff, 1);
+		}
 }

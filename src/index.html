@@ -996,11 +996,28 @@
 					<div class="videocontent">
 						<div class="videocontent__container">
 							<div class="videocontent__controls">
-								<div class="timeline-container"></div>
 								<div class="controls">
-									<button class="controls__play-pause-btn"></button>
-									<button class="controls__timer"></button>
-									<button class="controls__volume"></button>
+									<button class="controls__play-pause-btn">
+										<svg class="controls__play controls__play--active">
+											<use xlink:href="./img/icons/sprite.svg#controlsplay"></use>
+										</svg>
+										<div class="controls__pause"></div>
+									</button>
+									<div class="controls__timeline-container">
+										<div class="controls__timeline-current">0:00</div>
+										/
+										<div class="controls__timeline-total"></div>
+										<input class="controls__timeline" type="range"step="1" value="0">
+									</div>
+									<button class="controls__speed-btn">1x</button>
+									<div class="controls__volume-container">
+										<button class="controls__volume">
+											<svg class="volume">
+												<use xlink:href="./img/icons/sprite.svg#volume"></use>
+											</svg>
+										</button>
+										<input class="controls__volume-level" type="range" min="0" max="100" step="1" value="50">
+									</div>
 								</div>
 							</div>
 							<div class="videocontent__player">
