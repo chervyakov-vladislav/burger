@@ -130,11 +130,30 @@
 }
 
 input[type=range] {
+	-webkit-appearance: none;
+	height: 3px;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	background-color: $yellow;
 	cursor: pointer;
 	opacity: .8;
 	transition: opacity .3s;
 
 	&:hover {
 		opacity: 1;
+	}
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: $orange;
+	transition: .3s;
+
+	&:hover {
+		background: $hover-orange;
 	}
 }
