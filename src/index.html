@@ -995,22 +995,42 @@
 					<h2 class="title title--color--black title--centered">как мы работаем</h2>
 					<div class="videocontent">
 						<div class="videocontent__container">
-							<!-- заменить на iframe и воткнуть видео из ютуба по документации api-->
-							<div class="videocontent__player"></div>
-							<div class="videocontent__play-btn">
-								<svg class="play">
-									<use xlink:href="./img/icons/sprite.svg#play"></use>
-								</svg>
+							<div class="videocontent__controls">
+								<div class="controls">
+									<button class="controls__play-pause-btn">
+										<svg class="controls__play controls__play--active">
+											<use xlink:href="./img/icons/sprite.svg#controlsplay"></use>
+										</svg>
+										<div class="controls__pause"></div>
+									</button>
+									<div class="controls__timeline-container">
+										<div class="controls__timeline-current">0:00</div>
+										/
+										<div class="controls__timeline-total"></div>
+										<input class="controls__timeline" type="range"step="1" value="0">
+									</div>
+									<button class="controls__speed-btn">1x</button>
+									<div class="controls__volume-container">
+										<button class="controls__volume">
+											<svg class="volume">
+												<use xlink:href="./img/icons/sprite.svg#volume"></use>
+											</svg>
+										</button>
+										<input class="controls__volume-level" type="range" min="0" max="100" step="1" value="50">
+									</div>
+								</div>
+							</div>
+							<div class="videocontent__player">
+								<div class="videocontent__iframe" id="videocontent__iframe"></div>
+								<div class="videocontent__play-btn">
+									<svg class="play">
+										<use xlink:href="./img/icons/sprite.svg#play"></use>
+									</svg>
+								</div>
+								<div class="videocontent__pause-btn"></div>
 							</div>
 						</div>
-						<div class="videocontent__controls">
-							<div class="controls">
-								<div class="controls__play-pause"></div>
-								<div class="controls__timeline"></div>
-								<div class="controls__timer"></div>
-								<div class="controls__volume"></div>
-							</div>
-						</div>
+
 					</div>
 				</div>
 			</section>
