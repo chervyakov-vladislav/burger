@@ -1,5 +1,4 @@
 (function () {
-	// не удалось подключить через iframe, создал через js
 	let tag = document.createElement('script');
 	let playButton = document.querySelector('.videocontent__play-btn');
 	let pauseButton = document.querySelector('.videocontent__pause-btn');
@@ -12,10 +11,6 @@
 	let totalTimeElem = document.querySelector('.controls__timeline-total');
 	let speedButton = document.querySelector('.controls__speed-btn');
 	let timeline = document.querySelector('.controls__timeline');
-
-	tag.src = "https://www.youtube.com/iframe_api";
-	let firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 	let player;
 	onYouTubeIframeAPIReady = () => {
