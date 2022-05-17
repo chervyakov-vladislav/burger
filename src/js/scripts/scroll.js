@@ -1,27 +1,37 @@
 ;(function() {
 
 	const sections = document.querySelectorAll('.section');
+	const menuItems = document.querySelectorAll('.fixed-menu__item');
 	const display = document.querySelector('.maincontent');
 	let inscroll = false;
 	let  dataScroll = document.querySelectorAll("[data-scroll-to]");
 
+
+	//код функции должен быть переписан на 3 отдельные функции, но мне пока так понятнее
 	const performTransition = sectionIndex => {
-		if (inscroll == false) {
+		if (inscroll == false) { // if (inscroll) return; 
 			inscroll = true;
 			let position = `${sectionIndex * (-100)}%`;
 
 			sections[sectionIndex].classList.add('section--active');
+			menuItems[sectionIndex].classList.add('fixed-menu__item--active');
 			let siblings = getSiblings(sections[sectionIndex]);
 			for (let sibling in siblings) {
 				if (siblings[sibling].classList.contains('section--active')) {
 					siblings[sibling].classList.remove('section--active');
 				}
 			}
+			siblings = getSiblings(menuItems[sectionIndex]);
+			for (let sibling in siblings) {
+				if (siblings[sibling].classList.contains('fixed-menu__item--active')) {
+					siblings[sibling].classList.remove('fixed-menu__item--active');
+				}
+			}
 
 			display.style.cssText = `transform: translateY(${position});`;
 			setTimeout(() => {
 				inscroll = false;
-			}, 200 + 300);
+			}, 200 + 300); // время transition + время инерции на тачпадах, подробный коммент о работе, либо замена на понятные переменные
 		}
 	} 
 
@@ -123,6 +133,7 @@
 		event = null;
 	});
 
-	
+	// что-то читал о замене таймаутов на промисы и свормировать классы методы, но я не в курсах что это.
+	// отдельные действия нужно закинуть в отдельные функции
 	
 })();
