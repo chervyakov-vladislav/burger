@@ -27,13 +27,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper {
-    position: relative;
-    width: 100%;
-    // min-width: rem(940px) + rem(20px);
-    min-height: 100%;
-    overflow: hidden;
-}
+//если закомменчено, значит вынесено в другой блок для наглядной реализации функционала
+// .wrapper {
+//     position: relative;
+//     width: 100%;
+//     // min-width: rem(940px) + rem(20px);
+//     min-height: 100%;
+//     overflow: hidden;
+// }
 
 .container {
 		width: 98%;

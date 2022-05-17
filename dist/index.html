@@ -35,7 +35,7 @@
 
 		<div class="maincontent">
 
-			<section class="section hero">
+			<section class="section hero section--active">
 				<div class="container hero__container">
 					<header class="header">
 						<svg class="logo">
@@ -45,30 +45,30 @@
 							<nav class="nav">
 								<ul class="nav__list">
 									<li class="nav__item">
-										<a href="#" class="nav__link">о нас</a>
+										<a class="nav__link" href data-scroll-to="1">о нас</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">бургеры</a>
+										<a class="nav__link" href data-scroll-to="2">команда</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">команда</a>
+										<a class="nav__link" href data-scroll-to="3">бургеры</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">меню</a>
+										<a class="nav__link" href data-scroll-to="4">меню</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">отзывы</a>
+										<a class="nav__link" href data-scroll-to="5">отзывы</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">как мы работаем</a>
+										<a class="nav__link" href data-scroll-to="6">как мы работаем</a>
 									</li>
 									<li class="nav__item">
-										<a href="#" class="nav__link">контакты</a>
+										<a class="nav__link" href data-scroll-to="8">контакты</a>
 									</li>
 								</ul>
 							</nav>
-							<button type="button" class="btn">Заказать</button>
-							<a href="#" class="hamburger-menu">
+							<button type="button" class="btn" data-scroll-to="7">Заказать</button>
+							<a class="hamburger-menu" href="#">
 								<span class="hamburger-menu__line"></span>
 								<span class="hamburger-menu__line"></span>
 								<span class="hamburger-menu__line"></span>
@@ -90,8 +90,8 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="arrow-scroll-btn">
-					<svg class="arrow-scroll">
+				<button type="button" class="arrow-scroll-btn" data-scroll-to="1">
+					<svg class="arrow-scroll" data-scroll-to="1">
 						<use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
 					</svg>
 				</button>
@@ -325,7 +325,7 @@
 													<span class="burger-card__order--amount">500</span>
 													<span class="burger-card__order--currency">рублей</span>
 												</div>
-												<button type="button" class="btn">Заказать</button>
+												<button type="button" class="btn" data-scroll-to="7">Заказать</button>
 											</div>
 										</div>
 									</div>
@@ -434,7 +434,7 @@
 													<span class="burger-card__order--amount">500</span>
 													<span class="burger-card__order--currency">рублей</span>
 												</div>
-												<button type="button" class="btn">Заказать</button>
+												<button type="button" class="btn" data-scroll-to="7">Заказать</button>
 											</div>
 										</div>
 									</div>
@@ -542,7 +542,7 @@
 													<span class="burger-card__order--amount">500</span>
 													<span class="burger-card__order--currency">рублей</span>
 												</div>
-												<button type="button" class="btn">Заказать</button>
+												<button type="button" class="btn" data-scroll-to="7">Заказать</button>
 											</div>
 										</div>
 									</div>
@@ -651,7 +651,7 @@
 													<span class="burger-card__order--amount">500</span>
 													<span class="burger-card__order--currency">рублей</span>
 												</div>
-												<button type="button" class="btn">Заказать</button>
+												<button type="button" class="btn" data-scroll-to="7">Заказать</button>
 											</div>
 										</div>
 									</div>
@@ -760,7 +760,7 @@
 													<span class="burger-card__order--amount">500</span>
 													<span class="burger-card__order--currency">рублей</span>
 												</div>
-												<button type="button" class="btn">Заказать</button>
+												<button type="button" class="btn" data-scroll-to="7">Заказать</button>
 											</div>
 										</div>
 									</div>
@@ -1173,22 +1173,31 @@
 
 	<ul class="fixed-menu">
 		<li class="fixed-menu__item fixed-menu__item--active">
-			<button type="button" class="fixed-menu__dot"></button>
+			<button type="button" class="fixed-menu__dot" data-scroll-to="0"></button>
 		</li>
 		<li class="fixed-menu__item">
-			<button type="button" class="fixed-menu__dot"></button>
+			<button type="button" class="fixed-menu__dot" data-scroll-to="1"></button>
 		</li>
 		<li class="fixed-menu__item">
-			<button type="button" class="fixed-menu__dot"></button>
+			<button type="button" class="fixed-menu__dot" data-scroll-to="2"></button>
 		</li>
 		<li class="fixed-menu__item">
-			<button type="button" class="fixed-menu__dot"></button>
+			<button type="button" class="fixed-menu__dot" data-scroll-to="3"></button>
 		</li>
 		<li class="fixed-menu__item">
-			<button type="button" class="fixed-menu__dot"></button>
+			<button type="button" class="fixed-menu__dot" data-scroll-to="4"></button>
 		</li>
 		<li class="fixed-menu__item">
-			<button type="button" class="fixed-menu__dot"></button>
+			<button type="button" class="fixed-menu__dot" data-scroll-to="5"></button>
+		</li>
+		<li class="fixed-menu__item">
+			<button type="button" class="fixed-menu__dot" data-scroll-to="6"></button>
+		</li>
+		<li class="fixed-menu__item">
+			<button type="button" class="fixed-menu__dot" data-scroll-to="7"></button>
+		</li>
+		<li class="fixed-menu__item">
+			<button type="button" class="fixed-menu__dot" data-scroll-to="8"></button>
 		</li>
 	</ul>
 

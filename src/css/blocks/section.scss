@@ -4,8 +4,14 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
 
 	&--non-centered {
 		justify-content: flex-start;
+	}
+
+	@include tablets {
+		min-height: initial;
+		height: 100%;
 	}
 }

@@ -10,21 +10,27 @@
 }
 
 .fixed-menu__item {
+	transition: 1s;
 
+	&:hover {
+		.fixed-menu__dot {
+			border: 2px solid $red;
+		}
+	}
 
 	&--active {
 		.fixed-menu__dot {
-			border: rem(1px) solid #fff;
+			border: 1px solid #fff;
 		}
 	}
 }
 
 .fixed-menu__dot {
-	height: rem(16px);
-	width: rem(16px);
+	height: 16px;
+	width: 16px;
 	border-radius: 50%;
-	border: rem(1px) solid transparent;
-	margin-bottom: rem(3px);
+	border: 1px solid transparent;
+	margin-bottom: 3px;
 	position: relative;
 	transition: 0.2s;
 
@@ -34,8 +40,8 @@
 
 	&::before {
 		content: "";
-		width: rem(6px);
-		height: rem(6px);
+		width: 6px;
+		height: 6px;
 		border-radius: 50%;
 		background: #fff;
 		position: absolute;
