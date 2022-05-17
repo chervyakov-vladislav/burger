@@ -75,27 +75,54 @@
     }
 
     return siblings;
-}
-
-document.addEventListener('keydown', (e) => {
-
-	switch(e.keyCode) {
-		case 38 : 
-			scrollViewport('prev');
-			break;
-		case 40 :
-			scrollViewport('next');
-			break;
 	}
-});
+
+	document.addEventListener('keydown', (e) => {
+
+		switch(e.keyCode) {
+			case 38 : 
+				scrollViewport('prev');
+				break;
+			case 40 :
+				scrollViewport('next');
+				break;
+		}
+	});
 
 
-for (let i=0; i < dataScroll.length; i++) {
-	dataScroll[i].addEventListener('click', (e) => {
-		e.preventDefault();
-		let target = parseInt(e.target.dataset.scrollTo);
-		performTransition(target);
+	for (let i=0; i < dataScroll.length; i++) {
+		dataScroll[i].addEventListener('click', (e) => {
+			e.preventDefault();
+			let target = parseInt(e.target.dataset.scrollTo);
+			performTransition(target);
+		})
+	}
+
+
+	//mobile
+
+	let event;
+	let mobileDirection;
+	document.addEventListener('touchstart', e => {
+		event = e;
 	})
-}
 
+	document.addEventListener('touchmove', e => {
+		if (event) {
+			mobileDirection = e.touches[0].pageY - event.touches[0].pageY;
+			if (mobileDirection > 0) {
+				scrollViewport('prev');
+			}
+			if (mobileDirection < 0) {
+				scrollViewport('next');
+			}
+	}
+	})
+	
+	document.addEventListener("touched", function (e) {
+		event = null;
+	});
+
+	
+	
 })();
