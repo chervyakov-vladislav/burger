@@ -111,45 +111,6 @@ for (i = 0; i < itemTeamAccordeon.length; i++) {
 	});
 }
 
-// slider
-// не сделаны буллеты снизу
-let sliderContainer = document.querySelector('.slider-container__list');
-let sliderCarousel = document.querySelector('.slider-container__items');
-let sliderItem = document.querySelectorAll('.slider-container__item');
-let contentWidth = document.querySelector('.slider-container__list').clientWidth;
-let sliderLeft = document.querySelector('#slider-left');
-let sliderRight = document.querySelector('#slider-right');
-
-const minRight = 0;
-const maxRight = contentWidth * sliderItem.length;
-const step = contentWidth;
-let currentRight = 0;
-
-for (i = 0; i < sliderItem.length; i++) {
-	sliderItem[i].style.minWidth = contentWidth + "px";
-}
-
-sliderLeft.addEventListener('click', e => {
-	e.preventDefault();
-	if (Math.abs(currentRight) > minRight) {
-		currentRight += step;
-		sliderCarousel.style.transform = `translateX(${currentRight}px)`;
-	} else {
-		sliderCarousel.style.transform = `translateX(-${maxRight - step}px)`;
-		currentRight = -(maxRight - step);
-	}
-});
-
-sliderRight.addEventListener('click', e => {
-	e.preventDefault();
-	if (Math.abs(currentRight) < (maxRight - step)) {
-		currentRight -= step;
-		sliderCarousel.style.transform = `translateX(${currentRight}px)`;
-	} else {
-		sliderCarousel.style.transform = `translateX(0px)`;
-		currentRight = 0;
-	}
-});
 
 //form popup вытаскиваем шаблон попапа и закидываем в форму
 const templateForm = document.querySelector('#formPopup').innerHTML;
