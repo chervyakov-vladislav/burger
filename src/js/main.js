@@ -56,15 +56,14 @@ for (i = 0; i < reviewButton.length; i++) {
 }
 
 function createOverlay(title, text) {
-	// как создавать шаблон без лишнего дива?
 	const newElement = document.createElement('div');
+	newElement.classList.add('overlay');
 	newElement.innerHTML = template;
 
 	const closeOverlay = newElement.querySelector('.overlay__close-btn');
-	const closeOverlayBg = newElement.querySelector('.overlay');
 
-	closeOverlayBg.addEventListener('click', function (e) {
-		if (e.target === closeOverlayBg) {
+	newElement.addEventListener('click', function (e) {
+		if (e.target === newElement) {
 			closeOverlay.click();
 		}
 	});
@@ -148,13 +147,13 @@ sendButton.addEventListener('click', (e) => {
 
 function createFormOverlay(text) {
 	const newElement = document.createElement('div');
+	newElement.classList.add('overlay');
 	newElement.innerHTML = templateForm;
 
 	const closeOverlay = newElement.querySelector('.btn--overlay');
-	const closeOverlayBg = newElement.querySelector('.overlay');
 
-	closeOverlayBg.addEventListener('click', function (e) {
-		if (e.target === closeOverlayBg) {
+	newElement.addEventListener('click', function (e) {
+		if (e.target === newElement) {
 			closeOverlay.click();
 		}
 	});

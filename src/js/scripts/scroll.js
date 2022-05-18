@@ -13,7 +13,8 @@
 			inscroll = true;
 			let position = `${sectionIndex * (-100)}%`;
 
-			setTimeout(closeModal, 500); // закрыть гамбургер-меню через 0.5 секунд 
+			setTimeout(closeModalBurger, 500); // закрыть гамбургер-меню через 0.5 секунд 
+			setTimeout(closeModalOverlay, 500); // закрыть оверлей отзыва через 0.5 секунд 
 			sections[sectionIndex].classList.add('section--active');
 			menuItems[sectionIndex].classList.add('fixed-menu__item--active');
 			let siblings = getSiblings(sections[sectionIndex]);
@@ -137,7 +138,7 @@
 		event = null;
 	});
 
-	function closeModal() {
+	function closeModalBurger() {
 		//закрытие бургера
 		if (hamburgerMenu.classList.contains('hamburger-menu--unToggled') && header.classList.contains('header--fullscreen')) {
 			hamburgerMenu.classList.remove('hamburger-menu--unToggled');
@@ -148,7 +149,12 @@
 		}
 		header.classList.remove('header--fullscreen');
 		body.style.overflow = 'inherit';
-		
+	}
+
+	function closeModalOverlay() {
+		if(document.querySelector('.overlay')){
+			document.querySelector('.overlay').remove();
+		}
 	}
 
 	// что-то читал о замене таймаутов на промисы и свормировать классы методы, но я не в курсах что это.
