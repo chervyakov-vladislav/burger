@@ -7,6 +7,7 @@
 .arrow-scroll {
 	width: rem(28.685px);
 	height: rem(14.479px);
+	pointer-events: none;
 
 	@include phones {
 		width: rem(50px);

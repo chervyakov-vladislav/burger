@@ -4,9 +4,18 @@ var i;
 
 const header = document.querySelector('.header');
 const body = document.querySelector('body');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
 
 header.addEventListener('click', function (e) {
 	const hamburger = e.target.closest('.hamburger-menu');
+	if (hamburgerMenu.classList.contains('hamburger-menu--unToggled')) {
+		hamburgerMenu.classList.remove('hamburger-menu--unToggled');
+		hamburgerMenu.classList.add('hamburger-menu--toggled');
+	} else if (hamburgerMenu.classList.contains('hamburger-menu--toggled') && e.target.closest('.nav__item')) {
+		hamburgerMenu.classList.add('hamburger-menu--unToggled');
+		hamburgerMenu.classList.remove('hamburger-menu--toggled');
+	}
+	
 	if (hamburger && e.target.closest('.header--fullscreen')) {
 		header.classList.remove('header--fullscreen');
 		body.style.overflow = 'inherit';
