@@ -37,6 +37,7 @@
 		}
 		.burger-card__composition--hover {
 			display: block;
+			animation: compositionAnimation .3s;
 		}
 	}
 }
@@ -62,11 +63,16 @@
 }
 
 .burger-card__composition--hover {
-	padding: rem(15px) rem(20px);
+	padding-left: rem(20px);
+	padding-right: rem(20px);
+	padding-top: rem(15px);
+	padding-bottom: rem(15px);
 	background: rgba(#fff, .9);
 	border-radius: 5px;
 	display: none;
 	position: relative;
+	height: 100%;
+
 
 	@include tablets {
 		padding-right: rem(80px);

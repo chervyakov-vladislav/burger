@@ -4,9 +4,18 @@ var i;
 
 const header = document.querySelector('.header');
 const body = document.querySelector('body');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
 
 header.addEventListener('click', function (e) {
 	const hamburger = e.target.closest('.hamburger-menu');
+	if (hamburgerMenu.classList.contains('hamburger-menu--unToggled')) {
+		hamburgerMenu.classList.remove('hamburger-menu--unToggled');
+		hamburgerMenu.classList.add('hamburger-menu--toggled');
+	} else if (hamburgerMenu.classList.contains('hamburger-menu--toggled') && e.target.closest('.nav__item')) {
+		hamburgerMenu.classList.add('hamburger-menu--unToggled');
+		hamburgerMenu.classList.remove('hamburger-menu--toggled');
+	}
+	
 	if (hamburger && e.target.closest('.header--fullscreen')) {
 		header.classList.remove('header--fullscreen');
 		body.style.overflow = 'inherit';
@@ -47,15 +56,14 @@ for (i = 0; i < reviewButton.length; i++) {
 }
 
 function createOverlay(title, text) {
-	// как создавать шаблон без лишнего дива?
 	const newElement = document.createElement('div');
+	newElement.classList.add('overlay');
 	newElement.innerHTML = template;
 
 	const closeOverlay = newElement.querySelector('.overlay__close-btn');
-	const closeOverlayBg = newElement.querySelector('.overlay');
 
-	closeOverlayBg.addEventListener('click', function (e) {
-		if (e.target === closeOverlayBg) {
+	newElement.addEventListener('click', function (e) {
+		if (e.target === newElement) {
 			closeOverlay.click();
 		}
 	});
@@ -102,45 +110,6 @@ for (i = 0; i < itemTeamAccordeon.length; i++) {
 	});
 }
 
-// slider
-// не сделаны буллеты снизу
-let sliderContainer = document.querySelector('.slider-container__list');
-let sliderCarousel = document.querySelector('.slider-container__items');
-let sliderItem = document.querySelectorAll('.slider-container__item');
-let contentWidth = document.querySelector('.slider-container__list').clientWidth;
-let sliderLeft = document.querySelector('#slider-left');
-let sliderRight = document.querySelector('#slider-right');
-
-const minRight = 0;
-const maxRight = contentWidth * sliderItem.length;
-const step = contentWidth;
-let currentRight = 0;
-
-for (i = 0; i < sliderItem.length; i++) {
-	sliderItem[i].style.minWidth = contentWidth + "px";
-}
-
-sliderLeft.addEventListener('click', e => {
-	e.preventDefault();
-	if (Math.abs(currentRight) > minRight) {
-		currentRight += step;
-		sliderCarousel.style.transform = `translateX(${currentRight}px)`;
-	} else {
-		sliderCarousel.style.transform = `translateX(-${maxRight - step}px)`;
-		currentRight = -(maxRight - step);
-	}
-});
-
-sliderRight.addEventListener('click', e => {
-	e.preventDefault();
-	if (Math.abs(currentRight) < (maxRight - step)) {
-		currentRight -= step;
-		sliderCarousel.style.transform = `translateX(${currentRight}px)`;
-	} else {
-		sliderCarousel.style.transform = `translateX(0px)`;
-		currentRight = 0;
-	}
-});
 
 //form popup вытаскиваем шаблон попапа и закидываем в форму
 const templateForm = document.querySelector('#formPopup').innerHTML;
@@ -178,13 +147,13 @@ sendButton.addEventListener('click', (e) => {
 
 function createFormOverlay(text) {
 	const newElement = document.createElement('div');
+	newElement.classList.add('overlay');
 	newElement.innerHTML = templateForm;
 
 	const closeOverlay = newElement.querySelector('.btn--overlay');
-	const closeOverlayBg = newElement.querySelector('.overlay');
 
-	closeOverlayBg.addEventListener('click', function (e) {
-		if (e.target === closeOverlayBg) {
+	newElement.addEventListener('click', function (e) {
+		if (e.target === newElement) {
 			closeOverlay.click();
 		}
 	});

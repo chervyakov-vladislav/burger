@@ -68,12 +68,8 @@
 								</ul>
 							</nav>
 							<button type="button" class="btn" data-scroll-to="7">Заказать</button>
-							<a class="hamburger-menu" href="#">
-								<span class="hamburger-menu__line"></span>
-								<span class="hamburger-menu__line"></span>
-								<span class="hamburger-menu__line"></span>
-								<span class="hamburger-menu__line"></span>
-								<span class="hamburger-menu__line"></span>
+							<a class="hamburger-menu hamburger-menu--unToggled" href="#">
+								<div class="hamburger-menu__container"></div>
 							</a>
 						</div>
 					</header>
@@ -91,7 +87,7 @@
 					</div>
 				</div>
 				<button type="button" class="arrow-scroll-btn" data-scroll-to="1">
-					<svg class="arrow-scroll" data-scroll-to="1">
+					<svg class="arrow-scroll">
 						<use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
 					</svg>
 				</button>
@@ -767,27 +763,7 @@
 								</div>
 							</div>
 						</div>
-						<ul class="slider-dots">
-							<li class="slider-dots__img slider-dots__img--active">
-								<img class="slider-dots__img--pic" src="./img/content/burgers/dark_beef_burger.png"
-									alt="dark_beef_burger">
-							</li>
-							<li class="slider-dots__img">
-								<img class="slider-dots__img--pic" src="./img/content/burgers/Spicy_Shrimp_Burger.png"
-									alt="Spicy_Shrimp_Burger">
-							</li>
-							<li class="slider-dots__img">
-								<img class="slider-dots__img--pic" src="./img/content/burgers/Chiken burger.png" alt="Chiken burger">
-							</li>
-							<li class="slider-dots__img">
-								<img class="slider-dots__img--pic" src="./img/content/burgers/NYC-Diner-Bacon-Cheeseburger.png"
-									alt="Diner-Bacon-Cheeseburger">
-							</li>
-							<li class="slider-dots__img">
-								<img class="slider-dots__img--pic" src="./img/content/burgers/burger_sandwich_PNG4124.png"
-									alt="burger_sandwich">
-							</li>
-						</ul>
+						<ul class="slider-dots"></ul>
 						<a href="#" class="arrow-scroll-btn arrow-scroll-btn--right" id="slider-right">
 							<svg class="arrow-scroll">
 								<use xlink:href="./img/icons/sprite.svg#arrow-scroll"></use>
@@ -1202,7 +1178,6 @@
 	</ul>
 
 	<script type="template" id="reviewsPopup">
-		<div class="overlay">
 			<div class="overlay__continer">
 				<div class="overlay__close">
 					<a href="#" class="overlay__close-btn"></a>
@@ -1212,10 +1187,8 @@
 					<div class="reviews__overlay--text"></div>
 				</div>
 			</div>
-		</div>
 	</script>
 	<script type="template" id="formPopup">
-		<div class="overlay">
 			<div class="overlay__continer overlay__continer--form">
 				<div class="overlay__content overlay__content--form">
 					<div class="reviews__overlay--text"></div>
@@ -1224,7 +1197,6 @@
 					<button type="button" class="btn btn--overlay">Закрыть</button>
 				</div>
 			</div>
-		</div>
 	</script>
 	<script src="https://www.youtube.com/iframe_api"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
