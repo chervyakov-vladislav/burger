@@ -1,5 +1,3 @@
- # ✨ Hello, I am Vladislav Chervyakov!
-
  ## Stack  
 
 ✅ **HTML**, **SCSS**, **JS**  
