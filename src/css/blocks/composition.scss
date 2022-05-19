@@ -30,13 +30,10 @@
 	right: 5%;
 	top: 5%;
 	position: absolute;
+	z-index: 10;
 
 	@include tablets {
 		display: block;
-	}
-	
-	@include phones {
-		right: 14%;
 	}
 }
 

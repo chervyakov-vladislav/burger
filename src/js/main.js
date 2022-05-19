@@ -11,7 +11,7 @@ header.addEventListener('click', function (e) {
 	if (hamburgerMenu.classList.contains('hamburger-menu--unToggled')) {
 		hamburgerMenu.classList.remove('hamburger-menu--unToggled');
 		hamburgerMenu.classList.add('hamburger-menu--toggled');
-	} else if (hamburgerMenu.classList.contains('hamburger-menu--toggled') && e.target.closest('.nav__item')) {
+	} else if (hamburgerMenu.classList.contains('hamburger-menu--toggled') && e.target.closest('.nav__item') || e.target.closest('.hamburger-menu')) {
 		hamburgerMenu.classList.add('hamburger-menu--unToggled');
 		hamburgerMenu.classList.remove('hamburger-menu--toggled');
 	}
