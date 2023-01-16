@@ -1,29 +1,31 @@
 {
-  "name": "burger_2",
+  "name": "burger",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "gulp": "cross-env NODE_ENV=development gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chervyakov-vladislav/burger_2.git"
+    "url": "https://github.com/chervyakov-vladislav/burger"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chervyakov-vladislav/burger_2/issues"
+    "url": "https://github.com/chervyakov-vladislav/burger"
   },
-  "homepage": "https://github.com/chervyakov-vladislav/burger_2#readme",
+  "homepage": "https://github.com/chervyakov-vladislav/burger",
   "devDependencies": {
     "@babel/core": "7.17.10",
     "@babel/preset-env": "7.17.10",
     "browser-sync": "2.27.9",
     "cross-env": "7.0.3",
     "del": "6.0.0",
+    "gh-pages": "^4.0.0",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-babel": "8.0.0",
