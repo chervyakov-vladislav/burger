@@ -5,7 +5,7 @@
 ✅ Configuring **gulp**  
   
 
- ### [Github-pages](https://chervyakov-vladislav.github.io/burger/dist/)  
+ ### [Github-pages](https://chervyakov-vladislav.github.io/burger/)  
   
   
  ## Contacts  
